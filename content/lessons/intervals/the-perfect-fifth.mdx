@@ -1,0 +1,74 @@
+export const frontmatter = {
+  title: "The Perfect Fifth",
+  slug: "the-perfect-fifth",
+  level: "beginner",
+  category: "intervals",
+  prerequisites: ["half-and-whole-steps"],
+  estimatedMinutes: 7,
+  order: 1,
+};
+
+# The Perfect Fifth
+
+The **perfect fifth** is the most stable, consonant interval after the octave.
+Once you can hear it, you will hear it everywhere.
+
+## What it is
+
+A perfect fifth spans **seven half steps**. From C, count up seven semitones
+and you land on G.
+
+<PlayButton notes="C4 G4" label="Hear a perfect fifth" />
+
+It is called *perfect* because it sounds neither happy nor sad — just open and
+solid. That stability comes from physics: the two notes vibrate in a clean
+**3:2 frequency ratio**, the simplest ratio after the octave's 2:1.
+
+## Where you have already heard it
+
+- The opening leap of *Twinkle, Twinkle, Little Star*
+- The first two notes of the *Star Wars* main theme
+- Every guitar **power chord** — a power chord is literally a root and a fifth
+
+## The fifth builds the circle
+
+Stack perfect fifths and you generate all twelve keys. That is exactly what the
+circle of fifths is: each clockwise step is one perfect fifth up. Click around
+it and listen.
+
+<CircleOfFifths />
+
+## Spotting it by ear
+
+The perfect fifth has a bright, hollow ring. Compare it with its near
+neighbour, the perfect fourth (five semitones):
+
+<PlayButton notes="C4 F4" label="Perfect fourth" />
+<PlayButton notes="C4 G4" label="Perfect fifth" />
+
+The fourth feels like it still wants to move somewhere. The fifth feels
+finished.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={2}>
+How many half steps are in a perfect fifth?
+
+<Option>Five</Option>
+<Option>Six</Option>
+<Option>Seven</Option>
+<Option>Eight</Option>
+</Question>
+
+<Question type="play-and-identify" play="C4,G4" answer="fifth">
+Listen to the interval. Is it a fourth or a fifth?
+
+<Option value="fourth">Perfect fourth</Option>
+<Option value="fifth">Perfect fifth</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+Each clockwise step around the circle of fifths is a perfect fifth.
+</Question>
+
+</Quiz>

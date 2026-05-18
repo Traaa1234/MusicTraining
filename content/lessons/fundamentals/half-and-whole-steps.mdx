@@ -1,0 +1,87 @@
+export const frontmatter = {
+  title: "Half Steps & Whole Steps",
+  slug: "half-and-whole-steps",
+  level: "beginner",
+  category: "fundamentals",
+  prerequisites: [],
+  estimatedMinutes: 6,
+  order: 1,
+};
+
+# Half Steps & Whole Steps
+
+Every melody, scale, and chord you will ever play is built from just two
+units of distance: the **half step** and the **whole step**. Get these and
+the rest of theory stops being memorisation.
+
+## The half step
+
+A **half step** (or *semitone*) is the smallest distance in Western music —
+the move from any key to the one right next to it, with nothing in between.
+On a piano that is one key to the very next, black or white.
+
+<PlayButton notes="C4 C#4" label="Hear a half step" />
+
+C to C♯ is a half step. So is **E to F** — there is no black key between them,
+yet it is still that same smallest distance.
+
+## The whole step
+
+A **whole step** (or *tone*) is simply two half steps stacked together. C to D
+skips over C♯, so it covers two semitones.
+
+<PlayButton notes="C4 D4" label="Hear a whole step" />
+
+## Building the major scale
+
+Here is the payoff. The major scale is nothing more than a fixed pattern of
+whole (W) and half (H) steps:
+
+`W – W – H – W – W – W – H`
+
+Start on C, follow that pattern, and you land exactly on the white keys:
+
+<Piano scale="C major" />
+
+| Move | Distance | Lands on |
+| --- | --- | --- |
+| C → D | Whole | D |
+| D → E | Whole | E |
+| E → F | Half | F |
+| F → G | Whole | G |
+
+The two half steps — between degrees 3–4 and 7–8 — are what give the major
+scale its bright, resolved sound. Shift them and you get a different scale
+entirely.
+
+## Why it matters
+
+Once you can *hear* the difference between a half and a whole step, you can
+spell any scale or chord from a formula instead of memorising it. It is the
+single most useful idea for a beginner.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+How many half steps are in a whole step?
+
+<Option>One</Option>
+<Option>Two</Option>
+<Option>Three</Option>
+<Option>Four</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+E to F is a half step, even though there is no black key between them.
+</Question>
+
+<Question type="multiple-choice" answer={2}>
+Which pattern spells the major scale?
+
+<Option>H – W – W – H – W – W – W</Option>
+<Option>W – H – W – W – H – W – W</Option>
+<Option>W – W – H – W – W – W – H</Option>
+<Option>W – W – W – H – W – W – H</Option>
+</Question>
+
+</Quiz>

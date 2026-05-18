@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ear Train
 
-## Getting Started
+A web-first music theory and ear-training app. The web build is the primary
+target; it will later be wrapped for mobile with [Capacitor](https://capacitorjs.com/).
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Other scripts:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # production build
+npm run start   # serve the production build
+npm run lint    # eslint
+```
 
-## Learn More
+### Environment
 
-To learn more about Next.js, take a look at the following resources:
+Copy `.env.local.example` to `.env.local` and fill in Supabase values. The
+skeleton runs without them — they are only needed once auth and data sync land.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Concern         | Choice                                            |
+| --------------- | ------------------------------------------------- |
+| Framework       | Next.js (App Router) + TypeScript (strict mode)   |
+| Styling         | Tailwind CSS v4 + shadcn/ui (new-york, slate)     |
+| Client state    | Zustand                                           |
+| Audio           | Tone.js (synthesis + scheduling)                  |
+| Music theory    | @tonaljs/tonal                                    |
+| Backend         | Supabase (installed, not yet connected)           |
+| Icons           | lucide-react                                      |
 
-## Deploy on Vercel
+> Note: `create-next-app` installed the latest stable Next.js (16.x). The spec
+> named Next 15; the App Router API used here is unchanged between the two.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Folder conventions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/                 Routes (App Router)
+  (marketing)/       Landing page (route group — no URL segment)
+  learn/             Theory lessons hub
+  train/             Ear training hub
+  tools/             Fretboard, circle of fifths, scale visualizer
+  practice/          Play-along / backing tracks
+  profile/           Progress + settings
+  layout.tsx         Global shell (AudioProvider + AppShell)
+
+components/
+  ui/                shadcn/ui components
+  audio/             Audio components (AudioProvider, Player, NoteButton, ...)
+  music/             Music-domain components (Fretboard, CircleOfFifths, Staff, ...)
+  layout/            Navigation + shell
+
+lib/
+  music/             PURE music theory utilities — no audio, no UI
+  audio/             Tone.js context + samplers + pitch detection
+  supabase/          Browser + server Supabase clients
+  store/             Zustand stores
+  utils.ts           cn() class-name helper
+
+types/
+  music.ts           Note, Interval, Scale, Chord, Key types
+```
+
+### Rules of thumb
+
+- `lib/music/*` is pure: it imports only from `types/` and never touches audio
+  or the DOM. Keep it that way so theory logic stays testable.
+- Audio cannot start until a user gesture. `AudioProvider` resumes the Tone.js
+  context on the first interaction; read readiness with `useAudio()`.
+- Path alias `@/*` maps to the project root (e.g. `@/lib/utils`).

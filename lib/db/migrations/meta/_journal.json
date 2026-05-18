@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1779070100037,
+      "tag": "0000_free_siren",
+      "breakpoints": true
+    }
+  ]
+}
