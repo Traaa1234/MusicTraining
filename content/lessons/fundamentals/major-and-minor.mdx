@@ -1,0 +1,118 @@
+export const frontmatter = {
+  title: "Major & Minor — Two Colours of Sound",
+  slug: "major-and-minor",
+  level: "beginner",
+  category: "fundamentals",
+  prerequisites: ["half-and-whole-steps"],
+  estimatedMinutes: 9,
+  order: 4,
+};
+
+# Major & Minor — Two Colours of Sound
+
+Ask anyone to describe music and two words turn up fast: **happy** and
+**sad**. Musicians have precise names for those two colours — **major** and
+**minor** — and the difference between them is far smaller than you'd guess.
+
+## Two scales, two moods
+
+- **Major** sounds bright, open, and resolved — think nursery rhymes,
+  anthems, and celebration.
+- **Minor** sounds darker, heavier, more serious — think suspense, longing,
+  and reflection.
+
+Here is a C **major** scale and a C **natural minor** scale. They begin and
+end on the same note, yet the mood flips completely:
+
+<Piano scale="C major" />
+
+<Piano scale="C natural-minor" />
+
+Look closely and you'll see most of the notes are *shared*. Only a few keys
+shift between the two — and that small handful carries the entire change of
+mood.
+
+## It comes down to the third
+
+If you had to point at **one** note that decides major versus minor, it is
+the **third** — the third note of the scale, counting up from the tonic.
+
+- In a **major** scale, the third sits a **major third** above the tonic —
+  four half steps.
+- In a **minor** scale, the third sits a **minor third** above the tonic —
+  three half steps.
+
+One half step. That single half step is the whole border between bright and
+dark.
+
+<PlayButton notes="C4 E4" label="Major third — bright" />
+<PlayButton notes="C4 Eb4" label="Minor third — dark" />
+
+## Hear it in a chord
+
+Stack that third together with the fifth and you get a **chord** — and now
+the mood is unmistakable.
+
+<PlayButton notes="C4 E4 G4" label="C major chord" chord />
+<PlayButton notes="C4 Eb4 G4" label="C minor chord" chord />
+
+Both chords share the same outer notes — C on the bottom, G on top. It is the
+**middle note**, E versus E♭, that does all of the emotional work.
+
+## Train your ear for it
+
+You do **not** need perfect pitch to tell major from minor — almost everyone
+can, the moment they know what to listen for. The trick is to stop hearing
+"a chord" as one blurry sound and instead listen straight to **the third**:
+is that middle note lifted and bright, or settled and dark?
+
+That one question will carry you a remarkably long way once you reach the
+ear-training exercises.
+
+## Why it matters
+
+Major and minor are the two pillars that every other sound is measured
+against. Modes, chord qualities, key signatures — nearly all of theory is
+really answering "how does this differ from plain major or minor?" Hear the
+third clearly and the rest of music has a reference point.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={2}>
+The single note that most decides whether a scale or chord sounds major or
+minor is the...
+
+<Option>root</Option>
+<Option>fifth</Option>
+<Option>third</Option>
+<Option>octave</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+A minor third is one half step smaller than a major third.
+</Question>
+
+<Question type="play-and-identify" play="C4,E4,G4" answer="major">
+Listen to the chord. Is it major or minor?
+
+<Option value="major">Major</Option>
+<Option value="minor">Minor</Option>
+</Question>
+
+<Question type="play-and-identify" play="C4,Eb4,G4" answer="minor">
+And this chord — major or minor?
+
+<Option value="major">Major</Option>
+<Option value="minor">Minor</Option>
+</Question>
+
+<Question type="multiple-choice" answer={0}>
+A major third spans how many half steps?
+
+<Option>4</Option>
+<Option>3</Option>
+<Option>5</Option>
+<Option>7</Option>
+</Question>
+
+</Quiz>

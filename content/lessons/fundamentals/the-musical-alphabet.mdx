@@ -1,0 +1,129 @@
+export const frontmatter = {
+  title: "The Musical Alphabet & Octaves",
+  slug: "the-musical-alphabet",
+  level: "beginner",
+  category: "fundamentals",
+  prerequisites: [],
+  estimatedMinutes: 9,
+  order: 1,
+};
+
+# The Musical Alphabet & Octaves
+
+Before you can talk about scales, chords, or keys, you need names for the
+notes. Music uses a surprisingly small set of them — and once you see the
+pattern, the whole keyboard stops looking like a wall of keys.
+
+## Seven letters, then it repeats
+
+Western music names notes with just **seven letters**:
+
+**A — B — C — D — E — F — G**
+
+After G you don't continue to H. You start over at A. The musical alphabet is
+a **loop, not a line** — it cycles round and round, as low or as high as the
+instrument can reach.
+
+That's the whole naming system. Seven letters. Every sharp, every flat, every
+chord symbol you will ever meet is built on top of these seven.
+
+## The keyboard makes it obvious
+
+A piano keyboard is the clearest picture of this loop. Look only at the
+**white keys**: they are simply A B C D E F G, A B C D E F G, over and over.
+
+<Piano />
+
+Notice the black keys come in groups of **two** and **three**. That pattern
+is your map. The white key immediately to the **left of any group of two**
+black keys is always **C**. Find the twos, find C, and you can name every
+other white key by counting letters from there.
+
+## What is an octave?
+
+Play a C, then play the very next C above it. They sound different — one is
+higher — and yet they sound like *the same note*. That distance, from one
+note up to the next note of the same name, is an **octave**.
+
+<PlayButton notes="C3 C4" label="Hear an octave" />
+
+The word comes from the Latin *octo*, eight: count the white keys
+C-D-E-F-G-A-B-C and the second C is the eighth note you land on.
+
+## Why octaves sound "the same"
+
+This isn't your imagination — it's physics. When you play a note one octave
+higher, the string or air column vibrates **exactly twice as fast**. A 2:1
+ratio is the simplest possible relationship between two pitches, so your ear
+fuses them: same note, just brighter.
+
+Because of this, musicians treat every C on the keyboard as one shared idea —
+"C" — and only mention the octave when it actually matters.
+
+## Naming the octaves
+
+When the octave *does* matter, we tag the letter with a number. The standard
+reference point is **middle C, written C4** — roughly the middle of a piano.
+
+| Note   | Roughly where             |
+| ------ | ------------------------- |
+| C2     | low, left-hand bass       |
+| C3     | just below middle C       |
+| **C4** | **middle C**              |
+| C5     | a comfortable singing C   |
+| A4     | 440 Hz — the tuning pitch |
+
+So "C4" means "the C in the fourth octave." The number ticks over at **C**,
+not at A: C4 up through B4 are all octave 4, and the next note, C5, begins
+octave 5.
+
+## Why it matters
+
+Seven letters plus an octave number let you name **any** key on **any**
+instrument, exactly and unambiguously. Every scale and chord in the lessons
+ahead is just a chosen handful of these names. Get this loop solid and the
+rest of theory finally has something to stand on.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={2}>
+How many letter names does the musical alphabet use?
+
+<Option>Five</Option>
+<Option>Six</Option>
+<Option>Seven</Option>
+<Option>Twelve</Option>
+</Question>
+
+<Question type="multiple-choice" answer={0}>
+You're naming white keys going up and you reach G. What is the very next
+note?
+
+<Option>A</Option>
+<Option>H</Option>
+<Option>G♯</Option>
+<Option>C</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+C4 and C5 are different pitches, yet they share the same note name because
+they are exactly one octave apart.
+</Question>
+
+<Question type="multiple-choice" answer={1}>
+When you play a note one octave higher, its rate of vibration...
+
+<Option>stays the same</Option>
+<Option>doubles</Option>
+<Option>is cut in half</Option>
+<Option>triples</Option>
+</Question>
+
+<Question type="play-and-identify" play="C3,C4" answer="octave">
+Listen to these two notes. What is the distance between them?
+
+<Option value="octave">An octave</Option>
+<Option value="step">A single step</Option>
+</Question>
+
+</Quiz>

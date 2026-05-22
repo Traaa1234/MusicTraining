@@ -1,0 +1,134 @@
+export const frontmatter = {
+  title: "Major & Minor Thirds",
+  slug: "major-and-minor-thirds",
+  level: "beginner",
+  category: "intervals",
+  prerequisites: ["the-perfect-fifth"],
+  estimatedMinutes: 10,
+  order: 2,
+};
+
+# Major & Minor Thirds
+
+The perfect fifth is solid but neutral — it tells you nothing about mood. The
+**third** is the opposite. It is the single interval that decides whether music
+sounds **happy or sad**, and learning to hear it is the biggest ear-training
+win a beginner can score.
+
+## What a third is
+
+A **third** is the distance between a note and the note two letter names above
+it: C up to E, D up to F, G up to B. Count the letters — C, D, E — and you land
+on the third one. That is why it is called a third.
+
+But "two letters up" comes in **two sizes**, and the difference is exactly one
+half step. Those two sizes are the major third and the minor third.
+
+## The major third — bright
+
+A **major third** spans **four half steps**. From C, count up four semitones:
+C → C♯ → D → D♯ → **E**.
+
+<PlayButton notes="C4 E4" label="Hear a major third" />
+
+It sounds open, confident, sunlit. You already know it by ear:
+
+- The first two notes of *When the Saints Go Marching In*
+- The opening of *Kumbaya*
+- A bugle call — bugles can only play notes built from thirds and fifths
+
+## The minor third — dark
+
+A **minor third** spans **three half steps** — one semitone smaller. From C:
+C → C♯ → D → **D♯/E♭**.
+
+<PlayButton notes="C4 Eb4" label="Hear a minor third" />
+
+It sounds softer, heavier, a little melancholy. Also deeply familiar:
+
+- *Greensleeves* — "A-las, my love" leaps up a minor third
+- The two-note cuckoo call — a minor third falling
+- The opening riff of *Smoke on the Water*
+
+## One half step is the whole story
+
+Stack the two intervals side by side and the gap is tiny — a single key on the
+piano — yet the emotional change is total.
+
+| Interval | Half steps | From C | Mood |
+| --- | --- | --- | --- |
+| Major third | 4 | C–E | bright, happy |
+| Minor third | 3 | C–E♭ | dark, sad |
+
+<PlayButton notes="C4 E4" label="Major third" />
+<PlayButton notes="C4 Eb4" label="Minor third" />
+
+Play them back to back. That drop of one half step in the upper note is the
+border between major and minor — the same border you met in the Fundamentals
+track, now named as an interval.
+
+## Thirds are the bricks of chords
+
+Here is why thirds matter so much: **chords are stacks of thirds**. Take a root,
+add a third, add another third on top, and you have a triad.
+
+<PlayButton notes="C4 E4 G4" label="C major chord" chord />
+<PlayButton notes="C4 Eb4 G4" label="C minor chord" chord />
+
+Both chords keep the same outer shell — C on the bottom, G on top, a perfect
+fifth apart. Only the **middle note** moves, and that middle note is the third.
+Major third on the bottom → major chord. Minor third on the bottom → minor
+chord. Every triad you ever play is decided by this one interval.
+
+You can see the stack on the keyboard. In C major the chord tones C, E and G
+are every other white key — third, then third:
+
+<Piano scale="C major" />
+
+## Training your ear
+
+Do not try to hear "a major third" as one lump of sound. Instead, sing the two
+notes apart and ask one question: did the top note feel **lifted and bright**,
+or **settled and dark**? That single yes/no judgement is all the third asks of
+you — and with it you can label the mood of almost any chord you meet.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+How many half steps are in a major third?
+
+<Option>Three</Option>
+<Option>Four</Option>
+<Option>Five</Option>
+<Option>Seven</Option>
+</Question>
+
+<Question type="multiple-choice" answer={0}>
+A minor third is how much smaller than a major third?
+
+<Option>One half step</Option>
+<Option>One whole step</Option>
+<Option>Two half steps</Option>
+<Option>A perfect fourth</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+The note that decides whether a triad is major or minor is its third.
+
+</Question>
+
+<Question type="play-and-identify" play="C4,E4" answer="major">
+Listen to the interval. Is it a major or a minor third?
+
+<Option value="major">Major third</Option>
+<Option value="minor">Minor third</Option>
+</Question>
+
+<Question type="play-and-identify" play="C4,Eb4" answer="minor">
+And this one — major or minor third?
+
+<Option value="major">Major third</Option>
+<Option value="minor">Minor third</Option>
+</Question>
+
+</Quiz>

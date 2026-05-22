@@ -4,8 +4,14 @@
 // `frontmatter` object; the compiled MDX component is its default export.
 // New lessons are added by creating the .mdx file and importing it here.
 import type { ComponentType } from "react";
+import * as theMusicalAlphabet from "@/content/lessons/fundamentals/the-musical-alphabet.mdx";
+import * as sharpsFlatsEnharmonics from "@/content/lessons/fundamentals/sharps-flats-and-enharmonics.mdx";
 import * as halfAndWholeSteps from "@/content/lessons/fundamentals/half-and-whole-steps.mdx";
+import * as majorAndMinor from "@/content/lessons/fundamentals/major-and-minor.mdx";
 import * as thePerfectFifth from "@/content/lessons/intervals/the-perfect-fifth.mdx";
+import * as majorAndMinorThirds from "@/content/lessons/intervals/major-and-minor-thirds.mdx";
+import * as fourthsSixthsSevenths from "@/content/lessons/intervals/fourths-sixths-and-sevenths.mdx";
+import * as theTritone from "@/content/lessons/intervals/the-tritone-and-interval-quality.mdx";
 import * as theCagedSystem from "@/content/lessons/guitar-techniques/the-caged-system.mdx";
 
 export type LessonLevel = "beginner" | "intermediate" | "advanced";
@@ -99,8 +105,14 @@ export const CATEGORIES: Category[] = [
 ];
 
 const LESSON_MODULES = [
+  theMusicalAlphabet,
+  sharpsFlatsEnharmonics,
   halfAndWholeSteps,
+  majorAndMinor,
   thePerfectFifth,
+  majorAndMinorThirds,
+  fourthsSixthsSevenths,
+  theTritone,
   theCagedSystem,
 ];
 
