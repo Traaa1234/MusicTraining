@@ -16,6 +16,10 @@ import * as theMajorScale from "@/content/lessons/scales/the-major-scale.mdx";
 import * as theThreeMinorScales from "@/content/lessons/scales/the-three-minor-scales.mdx";
 import * as pentatonicScales from "@/content/lessons/scales/pentatonic-scales.mdx";
 import * as theBluesScale from "@/content/lessons/scales/the-blues-scale.mdx";
+import * as whatAreModes from "@/content/lessons/modes/what-are-modes.mdx";
+import * as lydianAndMixolydian from "@/content/lessons/modes/lydian-and-mixolydian.mdx";
+import * as dorianAndPhrygian from "@/content/lessons/modes/dorian-and-phrygian.mdx";
+import * as locrianAndChoosing from "@/content/lessons/modes/locrian-and-choosing-a-mode.mdx";
 import * as theCagedSystem from "@/content/lessons/guitar-techniques/the-caged-system.mdx";
 
 export type LessonLevel = "beginner" | "intermediate" | "advanced";
@@ -121,6 +125,10 @@ const LESSON_MODULES = [
   theThreeMinorScales,
   pentatonicScales,
   theBluesScale,
+  whatAreModes,
+  lydianAndMixolydian,
+  dorianAndPhrygian,
+  locrianAndChoosing,
   theCagedSystem,
 ];
 
