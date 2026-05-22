@@ -41,6 +41,9 @@ import * as chordSubstitution from "@/content/lessons/pro-tricks/chord-substitut
 import * as modalMixture from "@/content/lessons/pro-tricks/modal-mixture.mdx";
 import * as voiceLeading from "@/content/lessons/pro-tricks/voice-leading.mdx";
 import * as theCagedSystem from "@/content/lessons/guitar-techniques/the-caged-system.mdx";
+import * as pentatonicBoxes from "@/content/lessons/guitar-techniques/pentatonic-boxes.mdx";
+import * as positionPlaying from "@/content/lessons/guitar-techniques/position-playing.mdx";
+import * as essentialGuitarTechniques from "@/content/lessons/guitar-techniques/essential-guitar-techniques.mdx";
 
 export type LessonLevel = "beginner" | "intermediate" | "advanced";
 
@@ -170,6 +173,9 @@ const LESSON_MODULES = [
   modalMixture,
   voiceLeading,
   theCagedSystem,
+  pentatonicBoxes,
+  positionPlaying,
+  essentialGuitarTechniques,
 ];
 
 export const LESSONS: Lesson[] = LESSON_MODULES.map((module) => ({
