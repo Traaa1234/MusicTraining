@@ -1,0 +1,124 @@
+export const frontmatter = {
+  title: "The Circle of Fifths",
+  slug: "the-circle-of-fifths",
+  level: "intermediate",
+  category: "key-signatures",
+  prerequisites: ["key-signatures"],
+  estimatedMinutes: 11,
+  order: 2,
+};
+
+# The Circle of Fifths
+
+The twelve keys are not a random list. Arrange them by **perfect fifths** and
+they fall into a circle — and that circle is the single most useful diagram in
+music theory. It is a map of every key signature at once.
+
+## Building the circle
+
+Start at the top with **C major** — the key with no sharps and no flats. Now
+move up a **perfect fifth**: C up to G. That gives **G major**, which has one
+sharp.
+
+Up another fifth: G to **D** — two sharps. Keep going, one fifth at a time, and
+you walk through every sharp key:
+
+`C → G → D → A → E → B → F♯ → C♯`
+
+Each clockwise step adds exactly **one sharp**. Now go the other way from C —
+*down* a fifth, which is the same as up a fourth — and you collect flats:
+
+`C → F → B♭ → E♭ → A♭ → D♭ → G♭ → C♭`
+
+Each counter-clockwise step adds exactly **one flat**. Lay all of that around a
+clock face and you have the **circle of fifths**:
+
+<CircleOfFifths />
+
+Click around it and listen — each neighbour is one perfect fifth from the last.
+
+## Why a fifth adds exactly one sharp
+
+This is the elegant part. Why does moving up a fifth change the key signature
+by just one note?
+
+Compare the C major scale with the G major scale. They share **six of their
+seven notes**. The only difference is that C's F becomes G's **F♯**. Move up a
+fifth and you keep almost the whole scale — you just sharpen one note.
+
+So every clockwise step is the smallest possible key change: six notes stay,
+one note moves. That is why keys next to each other on the circle sound closely
+related, and why a fifth is the natural unit for organising keys.
+
+## The circle closes
+
+Follow the sharps far enough and follow the flats far enough and the two paths
+**meet at the bottom** of the circle. F♯ major and G♭ major land on the same
+spot — they are **enharmonic**, the same pitches spelled two ways. Twelve
+fifths stacked up come back, near enough, to where they began. The circle truly
+closes.
+
+## A map of key distance
+
+The circle's real power is that **distance around it equals musical
+closeness**:
+
+- **Neighbours** (one step apart) share six of seven notes — moving between
+  them sounds smooth and natural.
+- **Opposite sides** of the circle share very few notes — moving between them
+  sounds dramatic and remote.
+
+A key change to an adjacent key barely ruffles the ear; a jump across the
+circle is a bold event. Songwriters use the circle exactly this way — to judge
+how far a modulation will *feel*.
+
+## Why it matters
+
+The circle of fifths is a key-signature lookup table, a guide to which keys are
+related, a map of smooth chord motion (remember the ii–V–I moved by fifths),
+and a writing tool all in one diagram. Next, you will learn to read any key
+signature on sight — and the circle is the frame that makes the order of sharps
+and flats make sense.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={2}>
+Moving one step clockwise around the circle of fifths means moving up by a...
+
+<Option>half step</Option>
+<Option>whole step</Option>
+<Option>perfect fifth</Option>
+<Option>octave</Option>
+</Question>
+
+<Question type="multiple-choice" answer={1}>
+Each clockwise step around the circle changes the key signature by...
+
+<Option>adding one flat</Option>
+<Option>adding one sharp</Option>
+<Option>removing all accidentals</Option>
+<Option>adding two sharps</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+A major scale and the scale a fifth above it share six of their seven notes.
+
+</Question>
+
+<Question type="true-false" answer={false}>
+Keys on opposite sides of the circle of fifths are closely related and share
+most of their notes.
+
+</Question>
+
+<Question type="drag-to-order">
+Starting from C, put these keys in clockwise order around the circle.
+
+<Option>C</Option>
+<Option>G</Option>
+<Option>D</Option>
+<Option>A</Option>
+<Option>E</Option>
+</Question>
+
+</Quiz>

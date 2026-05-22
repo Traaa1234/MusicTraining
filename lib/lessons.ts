@@ -28,6 +28,10 @@ import * as cadences from "@/content/lessons/progressions/cadences.mdx";
 import * as theIiVI from "@/content/lessons/progressions/the-ii-v-i.mdx";
 import * as popProgressions from "@/content/lessons/progressions/pop-progressions.mdx";
 import * as twelveBarBlues from "@/content/lessons/progressions/twelve-bar-blues-and-modal-interchange.mdx";
+import * as keySignatures from "@/content/lessons/key-signatures/key-signatures.mdx";
+import * as theCircleOfFifths from "@/content/lessons/key-signatures/the-circle-of-fifths.mdx";
+import * as readingKeySignatures from "@/content/lessons/key-signatures/reading-key-signatures.mdx";
+import * as relativeAndParallelKeys from "@/content/lessons/key-signatures/relative-and-parallel-keys.mdx";
 import * as theCagedSystem from "@/content/lessons/guitar-techniques/the-caged-system.mdx";
 
 export type LessonLevel = "beginner" | "intermediate" | "advanced";
@@ -145,6 +149,10 @@ const LESSON_MODULES = [
   theIiVI,
   popProgressions,
   twelveBarBlues,
+  keySignatures,
+  theCircleOfFifths,
+  readingKeySignatures,
+  relativeAndParallelKeys,
   theCagedSystem,
 ];
 

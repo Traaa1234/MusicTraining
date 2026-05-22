@@ -1,0 +1,137 @@
+export const frontmatter = {
+  title: "Reading Key Signatures",
+  slug: "reading-key-signatures",
+  level: "intermediate",
+  category: "key-signatures",
+  prerequisites: ["the-circle-of-fifths"],
+  estimatedMinutes: 11,
+  order: 3,
+};
+
+# Reading Key Signatures
+
+You can now build key signatures with the circle of fifths. This lesson is
+about *reading* them — looking at a cluster of sharps or flats and naming the
+key instantly. There are two small patterns and two quick tricks, and then it
+is automatic.
+
+## Sharps appear in a fixed order
+
+Sharps are never added randomly. They always appear in the **same order**, the
+first one alone, then the first two, then the first three, and so on:
+
+`F♯ – C♯ – G♯ – D♯ – A♯ – E♯ – B♯`
+
+A key with one sharp has F♯. A key with two has F♯ and C♯. A key with three has
+F♯, C♯ and G♯. The order never varies.
+
+Notice the order is itself a chain of fifths — F up to C up to G up to D — the
+circle of fifths showing up again.
+
+A classic mnemonic for the sharp order is:
+
+> **F**ather **C**harles **G**oes **D**own **A**nd **E**nds **B**attle
+
+## Flats appear in the reverse order
+
+Flats follow the **exact reverse** of the sharp order:
+
+`B♭ – E♭ – A♭ – D♭ – G♭ – C♭ – F♭`
+
+One flat is B♭. Two flats are B♭ and E♭. And so on. The mnemonic simply runs
+the sharp sentence backwards:
+
+> **B**attle **E**nds **A**nd **D**own **G**oes **C**harles' **F**ather
+
+| Count | Sharp keys add | Flat keys add |
+| --- | --- | --- |
+| 1 | F♯ | B♭ |
+| 2 | + C♯ | + E♭ |
+| 3 | + G♯ | + A♭ |
+| 4 | + D♯ | + D♭ |
+
+## Trick 1 — naming a sharp key
+
+To name a **sharp key**, find the **last** sharp in the signature — the
+rightmost one — and go **up a half step**. That note is the major key.
+
+- Last sharp is **F♯** → up a half step → **G major**
+- Last sharp is **C♯** → up a half step → **D major**
+- Last sharp is **G♯** → up a half step → **A major**
+
+The leading tone of any major scale is a half step below the tonic — and the
+last sharp added is always that leading tone. So "last sharp plus a half step"
+always lands on home.
+
+## Trick 2 — naming a flat key
+
+Flat keys are even easier. The key is the **second-to-last flat** — the name of
+the flat one in from the right is the name of the key.
+
+- Flats are B♭, **E♭** → key of **E♭ major**
+- Flats are B♭, E♭, **A♭** → key of **A♭ major**
+- Flats are B♭, E♭, A♭, **D♭** → key of **D♭ major**
+
+The one exception is **F major**: it has a single flat (B♭), so there is no
+"second-to-last". F major you simply memorise — one flat.
+
+## Putting it together
+
+Read a signature in three quick beats:
+
+1. **Sharps or flats?** That tells you which family.
+2. **Count them.** That fixes how far around the circle you are.
+3. **Apply the trick.** Last sharp up a half step, or second-to-last flat.
+
+See three sharps — F♯, C♯, G♯ — last one is G♯, up a half step is **A major**.
+See three flats — B♭, E♭, A♭ — second-to-last is E♭, so **E♭ major**. With a
+little practice it takes less than a second.
+
+## Why it matters
+
+Reading a key signature on sight tells you the home note, the scale, and the
+seven diatonic chords of the music in front of you — before you play a note.
+The last lesson of this track adds the final piece: every signature actually
+names *two* keys, one major and one minor, and you will learn how they are
+paired.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+In what order do sharps always appear in a key signature?
+
+<Option>B♭ E♭ A♭ D♭ G♭ C♭ F♭</Option>
+<Option>F♯ C♯ G♯ D♯ A♯ E♯ B♯</Option>
+<Option>C♯ D♯ E♯ F♯ G♯ A♯ B♯</Option>
+<Option>F♯ G♯ A♯ C♯ D♯ E♯ B♯</Option>
+</Question>
+
+<Question type="multiple-choice" answer={2}>
+A key signature has three sharps: F♯, C♯ and G♯. What major key is it?
+
+<Option>E major</Option>
+<Option>D major</Option>
+<Option>A major</Option>
+<Option>B major</Option>
+</Question>
+
+<Question type="multiple-choice" answer={0}>
+A key signature has two flats: B♭ and E♭. What major key is it?
+
+<Option>B♭ major</Option>
+<Option>E♭ major</Option>
+<Option>F major</Option>
+<Option>A♭ major</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+The order of flats is the exact reverse of the order of sharps.
+
+</Question>
+
+<Question type="true-false" answer={false}>
+To name a sharp key, you take the last sharp and go down a half step.
+
+</Question>
+
+</Quiz>

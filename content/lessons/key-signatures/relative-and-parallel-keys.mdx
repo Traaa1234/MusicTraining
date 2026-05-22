@@ -1,0 +1,135 @@
+export const frontmatter = {
+  title: "Relative & Parallel Keys",
+  slug: "relative-and-parallel-keys",
+  level: "intermediate",
+  category: "key-signatures",
+  prerequisites: ["reading-key-signatures"],
+  estimatedMinutes: 11,
+  order: 4,
+};
+
+# Relative & Parallel Keys
+
+A key signature never names just one key. It always names **two** — one major
+and one minor — and they are called **relative** keys. This lesson explains
+that pairing, and the easily-confused idea next to it: **parallel** keys.
+
+## One signature, two keys
+
+The empty key signature — no sharps, no flats — is the signature of **C
+major**. But it is *also* the signature of **A minor**. Both keys use exactly
+the same seven notes, the white keys.
+
+That is no accident. You met it back in the Modes track: A minor (Aeolian) is
+just the C major scale started from its sixth note. Same notes, different home.
+Because the notes are identical, the **key signature is identical** too.
+
+Every key signature works this way — it belongs to a major key and a minor key
+at the same time. They are **relative** keys.
+
+## Finding the relative minor
+
+To go from a major key to its **relative minor**, move **down a minor third** —
+three half steps — from the major tonic. (That is the same as going *up* to the
+sixth degree of the scale.)
+
+- C major → down a minor third → **A minor**
+- G major → down a minor third → **E minor**
+- F major → down a minor third → **D minor**
+
+<PlayButton notes="C4 A3" label="C down to its relative minor, A" />
+
+To go the other way — minor key to its **relative major** — move **up** a minor
+third instead. A minor up a minor third is C major.
+
+| Major key | Relative minor | Shared signature |
+| --- | --- | --- |
+| C major | A minor | none |
+| G major | E minor | 1 sharp |
+| D major | B minor | 2 sharps |
+| F major | D minor | 1 flat |
+| B♭ major | G minor | 2 flats |
+
+## Parallel keys — the other pairing
+
+There is a second kind of key relationship, and it is the one beginners mix up
+with the first. **Parallel** keys share the **same tonic** but have **opposite
+modes**: C major and C **minor** are parallel keys.
+
+Parallel keys do **not** share a key signature. C major has no accidentals; C
+minor has three flats. Same home note, different set of notes.
+
+<PlayButton notes="C4 E4 G4" label="C major chord" chord />
+<PlayButton notes="C4 Eb4 G4" label="C minor chord — parallel, same root" chord />
+
+## Don't confuse the two
+
+The two relationships are near-opposites, and the names are the clue:
+
+| | Shared | Different |
+| --- | --- | --- |
+| **Relative** keys | the notes & key signature | the tonic (home note) |
+| **Parallel** keys | the tonic (home note) | the notes & key signature |
+
+A simple way to hold them apart:
+
+- **Relative** = *same notes, different home.* C major and A minor.
+- **Parallel** = *same home, different notes.* C major and C minor.
+
+## Where you have already met them
+
+Both ideas have appeared before. The bittersweet I–V–**vi**–IV pop loop leans
+on vi — the **relative minor** chord — to slip a shadow into a major key. And
+**modal interchange** borrows chords from the **parallel** key. Now you have
+the proper names: vi taps the relative key; a borrowed chord taps the parallel
+one.
+
+## Why it matters
+
+Key relationships are the geography of music. The relative minor gives a
+composer a free change of mood with no change of signature; the parallel key
+supplies borrowed colour; the circle of fifths charts how far any two keys sit
+apart. Together, this track has given you the full map of keys — what they are,
+how they are written, and how they connect.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={2}>
+A major key and its relative minor share...
+
+<Option>the same tonic note</Option>
+<Option>nothing in common</Option>
+<Option>the same notes and key signature</Option>
+<Option>the same tempo</Option>
+</Question>
+
+<Question type="multiple-choice" answer={1}>
+What is the relative minor of C major?
+
+<Option>C minor</Option>
+<Option>A minor</Option>
+<Option>E minor</Option>
+<Option>G minor</Option>
+</Question>
+
+<Question type="multiple-choice" answer={0}>
+To find the relative minor of a major key, move...
+
+<Option>down a minor third from the tonic</Option>
+<Option>up a perfect fifth from the tonic</Option>
+<Option>down a half step from the tonic</Option>
+<Option>up an octave from the tonic</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+C major and C minor are parallel keys: they share a tonic but have different
+key signatures.
+
+</Question>
+
+<Question type="true-false" answer={false}>
+Relative keys share the same tonic note.
+
+</Question>
+
+</Quiz>
