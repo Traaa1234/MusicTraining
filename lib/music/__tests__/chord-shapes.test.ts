@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { getChordShapes } from "@/lib/music/chord-shapes";
+import type { ChordQuality, NoteName } from "@/types/music";
 
 describe("getChordShapes", () => {
   it("returns the open C major shape", () => {
@@ -33,5 +34,19 @@ describe("getChordShapes", () => {
   it("returns the open shape before any barre shape for C major", () => {
     const shapes = getChordShapes("C", "major");
     expect(shapes[0]?.name).toBe("open");
+  });
+
+  it("returns the open shape for every listed open key", () => {
+    const samples: Array<[NoteName, ChordQuality, (number | null)[]]> = [
+      ["G", "major", [3, 2, 0, 0, 0, 3]],
+      ["E", "minor", [0, 2, 2, 0, 0, 0]],
+      ["E", "dominant7", [0, 2, 0, 1, 0, 0]],
+      ["A", "minor7", [null, 0, 2, 0, 1, 0]],
+      ["D", "sus2", [null, null, 0, 2, 3, 0]],
+    ];
+    for (const [root, quality, expected] of samples) {
+      const open = getChordShapes(root, quality).find((s) => s.name === "open");
+      expect(open?.positions, `${root}_${quality}`).toEqual(expected);
+    }
   });
 });

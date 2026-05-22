@@ -32,9 +32,185 @@ export interface ChordShapeTemplate {
 const OPEN_STRING_CHROMA = [4, 9, 2, 7, 11, 4];
 
 const OPEN_SHAPES: Record<string, ChordShape> = {
+  // ---- majors ----
   C_major: {
     positions: [null, 3, 2, 0, 1, 0],
     fingers: [null, 3, 2, null, 1, null],
+    baseFret: 1,
+    name: "open",
+  },
+  A_major: {
+    positions: [null, 0, 2, 2, 2, 0],
+    fingers: [null, null, 1, 2, 3, null],
+    baseFret: 1,
+    name: "open",
+  },
+  G_major: {
+    positions: [3, 2, 0, 0, 0, 3],
+    fingers: [3, 2, null, null, null, 4],
+    baseFret: 1,
+    name: "open",
+  },
+  E_major: {
+    positions: [0, 2, 2, 1, 0, 0],
+    fingers: [null, 2, 3, 1, null, null],
+    baseFret: 1,
+    name: "open",
+  },
+  D_major: {
+    positions: [null, null, 0, 2, 3, 2],
+    fingers: [null, null, null, 1, 3, 2],
+    baseFret: 1,
+    name: "open",
+  },
+
+  // ---- minors ----
+  A_minor: {
+    positions: [null, 0, 2, 2, 1, 0],
+    fingers: [null, null, 2, 3, 1, null],
+    baseFret: 1,
+    name: "open",
+  },
+  D_minor: {
+    positions: [null, null, 0, 2, 3, 1],
+    fingers: [null, null, null, 2, 3, 1],
+    baseFret: 1,
+    name: "open",
+  },
+  E_minor: {
+    positions: [0, 2, 2, 0, 0, 0],
+    fingers: [null, 2, 3, null, null, null],
+    baseFret: 1,
+    name: "open",
+  },
+
+  // ---- dominant 7ths ----
+  A_dominant7: {
+    positions: [null, 0, 2, 0, 2, 0],
+    fingers: [null, null, 2, null, 3, null],
+    baseFret: 1,
+    name: "open",
+  },
+  B_dominant7: {
+    positions: [null, 2, 1, 2, 0, 2],
+    fingers: [null, 2, 1, 3, null, 4],
+    baseFret: 1,
+    name: "open",
+  },
+  C_dominant7: {
+    positions: [null, 3, 2, 3, 1, 0],
+    fingers: [null, 3, 2, 4, 1, null],
+    baseFret: 1,
+    name: "open",
+  },
+  D_dominant7: {
+    positions: [null, null, 0, 2, 1, 2],
+    fingers: [null, null, null, 2, 1, 3],
+    baseFret: 1,
+    name: "open",
+  },
+  E_dominant7: {
+    positions: [0, 2, 0, 1, 0, 0],
+    fingers: [null, 2, null, 1, null, null],
+    baseFret: 1,
+    name: "open",
+  },
+  G_dominant7: {
+    positions: [3, 2, 0, 0, 0, 1],
+    fingers: [3, 2, null, null, null, 1],
+    baseFret: 1,
+    name: "open",
+  },
+
+  // ---- major 7ths ----
+  C_major7: {
+    positions: [null, 3, 2, 0, 0, 0],
+    fingers: [null, 3, 2, null, null, null],
+    baseFret: 1,
+    name: "open",
+  },
+  D_major7: {
+    positions: [null, null, 0, 2, 2, 2],
+    fingers: [null, null, null, 1, 2, 3],
+    baseFret: 1,
+    name: "open",
+  },
+  F_major7: {
+    positions: [null, null, 3, 2, 1, 0],
+    fingers: [null, null, 3, 2, 1, null],
+    baseFret: 1,
+    name: "open",
+  },
+  G_major7: {
+    positions: [3, 2, 0, 0, 0, 2],
+    fingers: [3, 1, null, null, null, 2],
+    baseFret: 1,
+    name: "open",
+  },
+  A_major7: {
+    positions: [null, 0, 2, 1, 2, 0],
+    fingers: [null, null, 2, 1, 3, null],
+    baseFret: 1,
+    name: "open",
+  },
+
+  // ---- minor 7ths ----
+  A_minor7: {
+    positions: [null, 0, 2, 0, 1, 0],
+    fingers: [null, null, 2, null, 1, null],
+    baseFret: 1,
+    name: "open",
+  },
+  D_minor7: {
+    positions: [null, null, 0, 2, 1, 1],
+    fingers: [null, null, null, 2, 1, 1],
+    barre: { fret: 1, fromString: 4, toString: 5 },
+    baseFret: 1,
+    name: "open",
+  },
+  E_minor7: {
+    positions: [0, 2, 0, 0, 0, 0],
+    fingers: [null, 2, null, null, null, null],
+    baseFret: 1,
+    name: "open",
+  },
+
+  // ---- sus2 ----
+  A_sus2: {
+    positions: [null, 0, 2, 2, 0, 0],
+    fingers: [null, null, 1, 2, null, null],
+    baseFret: 1,
+    name: "open",
+  },
+  D_sus2: {
+    positions: [null, null, 0, 2, 3, 0],
+    fingers: [null, null, null, 1, 3, null],
+    baseFret: 1,
+    name: "open",
+  },
+  E_sus2: {
+    positions: [0, 2, 4, 4, 0, 0],
+    fingers: [null, 1, 3, 4, null, null],
+    baseFret: 1,
+    name: "open",
+  },
+
+  // ---- sus4 ----
+  A_sus4: {
+    positions: [null, 0, 2, 2, 3, 0],
+    fingers: [null, null, 1, 2, 4, null],
+    baseFret: 1,
+    name: "open",
+  },
+  D_sus4: {
+    positions: [null, null, 0, 2, 3, 3],
+    fingers: [null, null, null, 1, 2, 3],
+    baseFret: 1,
+    name: "open",
+  },
+  E_sus4: {
+    positions: [0, 2, 2, 2, 0, 0],
+    fingers: [null, 1, 2, 3, null, null],
     baseFret: 1,
     name: "open",
   },
