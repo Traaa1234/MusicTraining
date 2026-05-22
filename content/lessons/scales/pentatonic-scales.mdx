@@ -1,0 +1,124 @@
+export const frontmatter = {
+  title: "Pentatonic Scales",
+  slug: "pentatonic-scales",
+  level: "beginner",
+  category: "scales",
+  prerequisites: ["the-three-minor-scales"],
+  estimatedMinutes: 10,
+  order: 3,
+};
+
+# Pentatonic Scales
+
+The major and minor scales have seven notes. The **pentatonic** scales have
+only **five** — *penta* is Greek for five — and dropping those two notes is one
+of the most useful tricks in music. Pentatonics are the backbone of folk, rock,
+blues, country and pop melody.
+
+## Major pentatonic — the major scale, trimmed
+
+The **major pentatonic** is simply the major scale with two notes removed: the
+**4th** and the **7th**.
+
+In C that means dropping F and B, leaving:
+
+`C – D – E – G – A`
+
+<Piano scale="C major-pentatonic" />
+
+<PlayButton notes="C4 D4 E4 G4 A4 C5" label="Hear C major pentatonic" />
+
+Why those two notes? The 4th and the 7th are the restless degrees — the 7th is
+the leading tone, and the 4th leans toward the 3rd. They also form the
+**tritone**, the most unstable interval. Remove them and what is left has no
+half steps and no tritone at all. Nothing clashes.
+
+## Minor pentatonic — the minor scale, trimmed
+
+The **minor pentatonic** does the same trimming to the natural minor scale,
+this time dropping the **2nd** and the **6th**.
+
+In A minor that means dropping B and F, leaving:
+
+`A – C – D – E – G`
+
+<PlayButton notes="A3 C4 D4 E4 G4 A4" label="Hear A minor pentatonic" />
+
+This is the single most-used scale in rock and blues lead guitar. Its shape on
+the fretboard is the first "box" most guitarists ever learn:
+
+<Fretboard scale="A minor-pentatonic" />
+
+## They are two views of one scale
+
+Look closely: **C major pentatonic** is `C D E G A`, and **A minor pentatonic**
+is `A C D E G`. The same five notes — just started from a different home.
+
+This is the **relative** relationship you will meet again in Key Signatures:
+every major pentatonic *is* a minor pentatonic three half steps lower, and vice
+versa. One set of five notes, two tonics, two moods.
+
+| Scale | Notes | Built from |
+| --- | --- | --- |
+| C major pentatonic | C D E G A | major scale minus 4 and 7 |
+| A minor pentatonic | A C D E G | natural minor minus 2 and 6 |
+
+## Why it sounds "safe"
+
+Because there are no half steps between any neighbouring notes, there is no
+strong dissonance to fall into. You can play the five notes in almost any order
+over a matching chord and it will sound musical. That is why pentatonics are
+the first scale handed to improvising guitarists — they let you make melodies
+immediately, before you understand every rule.
+
+The flip side: that safety can sound bland if you *only* ever use five notes.
+Pentatonics are a confident starting point, not a finish line — the two notes
+you removed are where colour and tension live.
+
+## Why it matters
+
+Pentatonic scales are everywhere: bagpipe tunes, gospel, blues licks, the black
+keys of the piano (which form an F♯ major pentatonic all on their own). Learn
+the two shapes and you can pick out a huge share of folk and popular melody by
+ear — and you are one note away from the blues scale, which is next.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+How many notes are in a pentatonic scale?
+
+<Option>Four</Option>
+<Option>Five</Option>
+<Option>Six</Option>
+<Option>Seven</Option>
+</Question>
+
+<Question type="multiple-choice" answer={2}>
+The major pentatonic scale is the major scale with which degrees removed?
+
+<Option>The 2nd and 6th</Option>
+<Option>The 3rd and 5th</Option>
+<Option>The 4th and 7th</Option>
+<Option>The 5th and 7th</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+C major pentatonic and A minor pentatonic contain the same five notes.
+
+</Question>
+
+<Question type="true-false" answer={false}>
+A pentatonic scale contains a tritone between two of its notes.
+
+</Question>
+
+<Question type="multiple-choice" answer={0}>
+Why do pentatonic scales sound "safe" to improvise with?
+
+<Option>They contain no half steps, so nothing clashes sharply</Option>
+<Option>They contain only half steps</Option>
+<Option>They have no tonic note</Option>
+<Option>They use only black keys</Option>
+</Question>
+
+</Quiz>

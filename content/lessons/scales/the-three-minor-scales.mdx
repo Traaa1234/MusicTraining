@@ -1,0 +1,141 @@
+export const frontmatter = {
+  title: "The Three Minor Scales",
+  slug: "the-three-minor-scales",
+  level: "intermediate",
+  category: "scales",
+  prerequisites: ["the-major-scale"],
+  estimatedMinutes: 12,
+  order: 2,
+};
+
+# The Three Minor Scales
+
+Major has one scale. Minor has **three** — and beginners often find this
+confusing until they see *why*. The three minor scales are not three unrelated
+things to memorise. They are one scale and two small repairs to a single
+problem. This lesson walks through that problem and its fixes.
+
+## Natural minor — the starting point
+
+The **natural minor** scale is the plain minor scale. Its formula is:
+
+`W – H – W – W – H – W – W`
+
+Start it on C and you get C natural minor — three flats compared with C major:
+
+<Piano scale="C natural-minor" />
+
+<PlayButton notes="C4 D4 Eb4 F4 G4 Ab4 Bb4 C5" label="Hear C natural minor" />
+
+Compared with the major scale, three degrees are lowered a half step — the
+**3rd, 6th and 7th**. That flattened 3rd is what makes it sound minor; you met
+it as the minor third back in the Intervals track.
+
+## Natural minor's one weakness
+
+Natural minor has a flaw. Look at its **7th degree** — in C natural minor that
+is B♭. It sits a **whole step** below the tonic, not a half step.
+
+Remember the leading tone from the major scale? It pulled strongly *up* into
+the tonic because it was only a half step away. Natural minor's 7th is too far
+away to pull like that. Play it and the ending sounds soft, unfinished — it
+does not snap home.
+
+<PlayButton notes="Bb4 C5" label="Natural minor 7th — a weak, soft ending" />
+
+For centuries that was a problem: composers wanted minor-key music that could
+still resolve with conviction. The other two minor scales are the two fixes.
+
+## Harmonic minor — fix the 7th
+
+The first fix is blunt: **raise the 7th degree by a half step.** That restores
+a true leading tone, just a half step below the tonic.
+
+<Piano scale="C harmonic-minor" />
+
+<PlayButton notes="B4 C5" label="Harmonic minor 7th — a firm leading tone" />
+
+Now the scale resolves with the same conviction as major. But the fix has a
+side effect. Raising the 7th while leaving the 6th low opens a wide gap between
+degrees **6 and 7** — three half steps, an **augmented second**:
+
+<PlayButton notes="Ab4 B4" label="The augmented 2nd — harmonic minor's exotic leap" />
+
+That stretched, almost Middle-Eastern-sounding leap is the signature of
+harmonic minor. Useful when you want it, awkward when you are writing a smooth
+melody.
+
+## Melodic minor — fix the gap too
+
+The second fix smooths that awkward gap. **Melodic minor raises both the 6th
+*and* the 7th** while ascending — closing the augmented second back into
+ordinary whole steps:
+
+<Piano scale="C melodic-minor" />
+
+<PlayButton notes="C4 D4 Eb4 F4 G4 A4 B4 C5" label="Hear C melodic minor ascending" />
+
+Going *up*, melodic minor is almost identical to major — only the lowered 3rd
+gives away that it is minor at all. In classical practice the raised 6th and
+7th are only needed on the way up; coming back *down*, melody no longer needs
+the upward pull, so it reverts to plain natural minor. (Jazz players often keep
+the raised form in both directions and call it the "jazz minor".)
+
+## The three side by side
+
+| Scale | 3rd | 6th | 7th | Why use it |
+| --- | --- | --- | --- | --- |
+| Natural minor | ♭3 | ♭6 | ♭7 | plain minor; soft ending |
+| Harmonic minor | ♭3 | ♭6 | **♮7** | strong resolution; exotic 6–7 leap |
+| Melodic minor | ♭3 | **♮6** | **♮7** | strong resolution; smooth melody |
+
+Read the table as a story: start with natural minor, raise the 7th to get
+harmonic minor, then also raise the 6th to get melodic minor. One scale, two
+repairs.
+
+## Why it matters
+
+Minor-key music constantly switches between these three forms — natural minor
+for the general colour, harmonic or melodic minor at moments that need to
+resolve. You do not pick one and stick to it; you draw the degree you need from
+whichever form supplies it. Knowing all three means you can hear *why* a minor
+melody bends the way it does.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+Compared with the major scale, natural minor lowers which degrees?
+
+<Option>The 2nd, 5th and 6th</Option>
+<Option>The 3rd, 6th and 7th</Option>
+<Option>The 4th and 7th</Option>
+<Option>Only the 3rd</Option>
+</Question>
+
+<Question type="multiple-choice" answer={2}>
+Harmonic minor is made from natural minor by...
+
+<Option>lowering the 3rd</Option>
+<Option>raising the 6th</Option>
+<Option>raising the 7th</Option>
+<Option>raising both the 6th and 7th</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+Harmonic minor contains an augmented second between its 6th and 7th degrees.
+
+</Question>
+
+<Question type="true-false" answer={false}>
+Ascending melodic minor raises only the 7th degree, leaving the 6th low.
+
+</Question>
+
+<Question type="play-and-identify" play="C4,Eb4,G4" answer="minor">
+Listen to this chord built on the minor scale's tonic. Major or minor?
+
+<Option value="major">Major</Option>
+<Option value="minor">Minor</Option>
+</Question>
+
+</Quiz>

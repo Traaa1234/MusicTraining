@@ -12,6 +12,10 @@ import * as thePerfectFifth from "@/content/lessons/intervals/the-perfect-fifth.
 import * as majorAndMinorThirds from "@/content/lessons/intervals/major-and-minor-thirds.mdx";
 import * as fourthsSixthsSevenths from "@/content/lessons/intervals/fourths-sixths-and-sevenths.mdx";
 import * as theTritone from "@/content/lessons/intervals/the-tritone-and-interval-quality.mdx";
+import * as theMajorScale from "@/content/lessons/scales/the-major-scale.mdx";
+import * as theThreeMinorScales from "@/content/lessons/scales/the-three-minor-scales.mdx";
+import * as pentatonicScales from "@/content/lessons/scales/pentatonic-scales.mdx";
+import * as theBluesScale from "@/content/lessons/scales/the-blues-scale.mdx";
 import * as theCagedSystem from "@/content/lessons/guitar-techniques/the-caged-system.mdx";
 
 export type LessonLevel = "beginner" | "intermediate" | "advanced";
@@ -113,6 +117,10 @@ const LESSON_MODULES = [
   majorAndMinorThirds,
   fourthsSixthsSevenths,
   theTritone,
+  theMajorScale,
+  theThreeMinorScales,
+  pentatonicScales,
+  theBluesScale,
   theCagedSystem,
 ];
 
