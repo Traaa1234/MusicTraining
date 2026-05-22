@@ -32,6 +32,10 @@ import * as keySignatures from "@/content/lessons/key-signatures/key-signatures.
 import * as theCircleOfFifths from "@/content/lessons/key-signatures/the-circle-of-fifths.mdx";
 import * as readingKeySignatures from "@/content/lessons/key-signatures/reading-key-signatures.mdx";
 import * as relativeAndParallelKeys from "@/content/lessons/key-signatures/relative-and-parallel-keys.mdx";
+import * as beatTempoAndMeter from "@/content/lessons/rhythm/beat-tempo-and-meter.mdx";
+import * as noteDurations from "@/content/lessons/rhythm/note-durations.mdx";
+import * as timeSignatures from "@/content/lessons/rhythm/time-signatures.mdx";
+import * as rhythmicPatterns from "@/content/lessons/rhythm/rhythmic-patterns.mdx";
 import * as theCagedSystem from "@/content/lessons/guitar-techniques/the-caged-system.mdx";
 
 export type LessonLevel = "beginner" | "intermediate" | "advanced";
@@ -153,6 +157,10 @@ const LESSON_MODULES = [
   theCircleOfFifths,
   readingKeySignatures,
   relativeAndParallelKeys,
+  beatTempoAndMeter,
+  noteDurations,
+  timeSignatures,
+  rhythmicPatterns,
   theCagedSystem,
 ];
 

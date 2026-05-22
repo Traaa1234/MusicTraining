@@ -1,0 +1,134 @@
+export const frontmatter = {
+  title: "Note Durations",
+  slug: "note-durations",
+  level: "beginner",
+  category: "rhythm",
+  prerequisites: ["beat-tempo-and-meter"],
+  estimatedMinutes: 11,
+  order: 2,
+};
+
+# Note Durations
+
+The beat gives you a steady grid. **Note durations** are how long each note
+holds *on* that grid — and the whole system is built on one simple idea:
+**every note value is half the length of the one above it.**
+
+## The halving tree
+
+Music names note lengths by repeatedly dividing in two. Start with the longest
+common note and keep splitting:
+
+- One **whole note**
+- splits into two **half notes**
+- each of which splits into two **quarter notes**
+- each of which splits into two **eighth notes**
+- each of which splits into two **sixteenth notes**
+
+The American names give the game away — a quarter note is one *quarter* of a
+whole note, an eighth note one *eighth*. Each step down the tree is a note
+twice as fast.
+
+## Counting them against the beat
+
+In the most common setting, the **quarter note gets one beat**. Everything else
+follows from that:
+
+| Note | Beats (when a quarter = 1 beat) | How many per whole note |
+| --- | --- | --- |
+| Whole note | 4 | 1 |
+| Half note | 2 | 2 |
+| Quarter note | 1 | 4 |
+| Eighth note | ½ | 8 |
+| Sixteenth note | ¼ | 16 |
+
+So in one bar of four beats you could play a single whole note, or two half
+notes, or four quarter notes, or eight eighth notes — each fills the same
+total time, just chopped more finely.
+
+<PlayButton notes="C4 C4 C4 C4" label="Four quarter notes — one per beat" />
+
+## Rests — the sound of silence
+
+Every note duration has a matching **rest** — a symbol for *silence* of that
+same length. There are whole rests, half rests, quarter rests, eighth rests,
+and so on.
+
+Rests are not gaps where "nothing happens". Silence is rhythm too. A
+well-placed rest gives music space to breathe, and the *absence* of a note on a
+strong beat can be as striking as a note. Counting never stops during a rest —
+you simply do not play.
+
+## Dotted notes
+
+A small **dot** written after a note **adds half of that note's value** to it.
+
+- A half note is 2 beats. A **dotted** half note is 2 + 1 = **3 beats**.
+- A quarter note is 1 beat. A **dotted** quarter note is 1 + ½ = **1½ beats**.
+
+The dot is how music writes lengths that fall *between* the neat halving tree —
+a note that lasts three beats has no plain symbol of its own, so the dotted
+half note supplies it.
+
+## Ties — joining notes together
+
+A **tie** is a curved line connecting two notes of the **same pitch**. It
+merges them into a single sound lasting their **combined** duration.
+
+Tie a half note to a quarter note and you get one note held for 2 + 1 = 3
+beats. Why not just write a dotted half note? Because ties can also join notes
+*across a bar line* — letting a sound carry from one measure into the next,
+which a single note symbol cannot do.
+
+## Why it matters
+
+Note durations turn the bare pulse into actual rhythm — long notes, short
+notes, silences, and the in-between lengths that dots and ties provide. The
+next question is how many beats go in each measure, and which note value counts
+as the beat in the first place. That is the job of the **time signature**.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+Each note value in the halving tree is...
+
+<Option>the same length as the one above it</Option>
+<Option>half the length of the one above it</Option>
+<Option>twice the length of the one above it</Option>
+<Option>three times the length of the one above it</Option>
+</Question>
+
+<Question type="multiple-choice" answer={2}>
+When a quarter note equals one beat, how many beats is a whole note?
+
+<Option>One</Option>
+<Option>Two</Option>
+<Option>Four</Option>
+<Option>Eight</Option>
+</Question>
+
+<Question type="multiple-choice" answer={0}>
+A dot after a note adds...
+
+<Option>half of that note's value</Option>
+<Option>one full beat, always</Option>
+<Option>double that note's value</Option>
+<Option>a moment of silence</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+A rest represents a specific duration of silence.
+
+</Question>
+
+<Question type="drag-to-order">
+Put these note values in order from longest to shortest.
+
+<Option>Whole note</Option>
+<Option>Half note</Option>
+<Option>Quarter note</Option>
+<Option>Eighth note</Option>
+<Option>Sixteenth note</Option>
+</Question>
+
+</Quiz>
