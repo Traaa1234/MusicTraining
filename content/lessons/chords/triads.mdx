@@ -1,0 +1,135 @@
+export const frontmatter = {
+  title: "Triads — The Three-Note Chords",
+  slug: "triads",
+  level: "beginner",
+  category: "chords",
+  prerequisites: ["major-and-minor-thirds"],
+  estimatedMinutes: 10,
+  order: 1,
+};
+
+# Triads — The Three-Note Chords
+
+A **chord** is several notes sounding at once. The smallest chord that still
+has a full identity is the **triad** — three notes — and almost all harmony you
+will ever meet is built from triads or small additions to them.
+
+## Stack two thirds
+
+You already know the trick from the Intervals track: **chords are stacks of
+thirds**. Take a root note, add a third on top, then add another third on top
+of that. Three notes, two thirds — a triad.
+
+The three notes get names by their distance from the root:
+
+- the **root** — the note the chord is named after
+- the **third** — decides major or minor
+- the **fifth** — the outer note, usually a perfect fifth
+
+## The four triad qualities
+
+Each of the two stacked thirds can be major (4 half steps) or minor (3 half
+steps). The four combinations give the four triad **qualities**.
+
+### Major triad
+
+A **major third** then a **minor third**. Bright and resolved.
+
+<PlayButton notes="C4 E4 G4" label="C major triad" chord />
+
+<Fretboard chord="C major" />
+
+### Minor triad
+
+A **minor third** then a **major third** — the reverse stack. Dark and serious.
+
+<PlayButton notes="C4 Eb4 G4" label="C minor triad" chord />
+
+### Diminished triad
+
+**Two minor thirds**. The outer interval shrinks to a tritone, so the chord
+sounds tense and unstable — it wants to move.
+
+<PlayButton notes="C4 Eb4 Gb4" label="C diminished triad" chord />
+
+### Augmented triad
+
+**Two major thirds**. The outer interval stretches to an augmented fifth. The
+chord sounds suspended and dreamlike, with no clear gravity.
+
+<PlayButton notes="C4 E4 G#4" label="C augmented triad" chord />
+
+## The pattern at a glance
+
+| Triad | Lower third | Upper third | Fifth | Sound |
+| --- | --- | --- | --- | --- |
+| Major | major | minor | perfect | bright, stable |
+| Minor | minor | major | perfect | dark, stable |
+| Diminished | minor | minor | diminished | tense, unstable |
+| Augmented | major | major | augmented | floating, unsettled |
+
+Notice how tidy this is. **Major and minor are mirror images** — the same two
+thirds in the opposite order. Diminished and augmented are the two "matched"
+stacks — same third twice — and both lose the steadying perfect fifth, which is
+exactly why they sound restless.
+
+## Root, third, fifth — the working parts
+
+Once a triad is built, each note has a job:
+
+- The **root** names the chord and anchors it.
+- The **third** is the colour switch — major or minor lives here, and nowhere
+  else.
+- The **fifth** is the reinforcement. It is so stable it adds little character;
+  in fact it is the first note players drop when a chord gets crowded.
+
+That ranking matters later: when you cannot play every note of a big chord, you
+keep the third (it carries the quality) and you let the fifth go.
+
+## Why it matters
+
+Two stacked thirds, four qualities — that is the entire vocabulary of basic
+harmony. Every pop song, every hymn, every folk tune is mostly major and minor
+triads. The next lesson takes these triads and builds one on **every note of a
+scale**, which is where chords start to tell a story.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+How many notes are in a triad?
+
+<Option>Two</Option>
+<Option>Three</Option>
+<Option>Four</Option>
+<Option>Five</Option>
+</Question>
+
+<Question type="multiple-choice" answer={2}>
+A diminished triad is built from...
+
+<Option>two major thirds</Option>
+<Option>a major third then a minor third</Option>
+<Option>two minor thirds</Option>
+<Option>a minor third then a major third</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+The third of a triad is the note that decides whether it is major or minor.
+
+</Question>
+
+<Question type="play-and-identify" play="C4,E4,G4" answer="major">
+Listen to the triad. Major or minor?
+
+<Option value="major">Major</Option>
+<Option value="minor">Minor</Option>
+</Question>
+
+<Question type="play-and-identify" play="C4,Eb4,Gb4" answer="diminished">
+Listen to this triad. Is it a stable major chord or a tense diminished one?
+
+<Option value="major">Major</Option>
+<Option value="diminished">Diminished</Option>
+</Question>
+
+</Quiz>

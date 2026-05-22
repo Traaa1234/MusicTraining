@@ -1,0 +1,141 @@
+export const frontmatter = {
+  title: "Seventh Chords",
+  slug: "seventh-chords",
+  level: "intermediate",
+  category: "chords",
+  prerequisites: ["diatonic-chords"],
+  estimatedMinutes: 11,
+  order: 3,
+};
+
+# Seventh Chords
+
+A triad has three notes. Stack **one more third** on top and you get a
+**seventh chord** — a four-note chord with far more colour and pull. Sevenths
+are the sound of jazz, soul, gospel and most sophisticated pop.
+
+## One more third
+
+You already stack thirds to build a triad: root, third, fifth. Keep going —
+add a third above the fifth — and you reach the **seventh** of the chord. Now
+the chord has four notes: **root, third, fifth, seventh**.
+
+Just as the *third* decided major versus minor, the **seventh** decides the
+flavour of a seventh chord. There are two sizes, exactly as with thirds:
+
+- a **major seventh** — 11 half steps above the root
+- a **minor seventh** — 10 half steps above the root
+
+Mix the triad quality with the seventh quality and you get the family of
+seventh chords below.
+
+## The major seventh chord
+
+A **major triad** plus a **major seventh**. Lush, warm, dreamy — the sound of a
+soft landing.
+
+<PlayButton notes="C4 E4 G4 B4" label="C major 7 (Cmaj7)" chord />
+
+<Fretboard chord="C major7" />
+
+## The dominant seventh chord
+
+A **major triad** plus a **minor seventh**. This is the restless one. Inside it
+hides a **tritone** — between the chord's third and seventh — and you met that
+tension back in the Intervals track. The tritone is why a dominant 7th sounds
+like it *must* resolve somewhere.
+
+<PlayButton notes="C4 E4 G4 Bb4" label="C dominant 7 (C7)" chord />
+
+The dominant 7th is built on the **V** chord of a key, and its craving to
+resolve down to **I** is the strongest pull in all of harmony.
+
+## The minor seventh chord
+
+A **minor triad** plus a **minor seventh**. Smooth, mellow, relaxed — minor
+without the heaviness.
+
+<PlayButton notes="C4 Eb4 G4 Bb4" label="C minor 7 (Cm7)" chord />
+
+## The two tense sevenths
+
+Built on the diminished triad, two more sevenths complete the set:
+
+The **half-diminished** chord — a diminished triad plus a *minor* seventh, also
+written **m7♭5**:
+
+<PlayButton notes="C4 Eb4 Gb4 Bb4" label="C half-diminished (Cm7♭5)" chord />
+
+The **fully diminished seventh** — a diminished triad plus a *diminished*
+seventh. Every interval inside it is a minor third, which makes it eerily
+symmetrical and very tense:
+
+<PlayButton notes="C4 Eb4 Gb4 A4" label="C diminished 7 (C°7)" chord />
+
+## The five common seventh chords
+
+| Chord | Symbol | Triad + 7th | Sound |
+| --- | --- | --- | --- |
+| Major seventh | maj7 | major triad + major 7th | lush, dreamy |
+| Dominant seventh | 7 | major triad + minor 7th | tense, bluesy |
+| Minor seventh | m7 | minor triad + minor 7th | smooth, mellow |
+| Half-diminished | m7♭5 | diminished triad + minor 7th | dark, searching |
+| Diminished seventh | °7 | diminished triad + diminished 7th | very tense, symmetrical |
+
+## Harmonising the scale, again
+
+Just as triads come from harmonising a scale, so do sevenths — add the seventh
+to each diatonic triad. In a major key the result is fixed:
+
+`Imaj7 – iim7 – iiim7 – IVmaj7 – V7 – vim7 – viiø7`
+
+Notice that only **one** chord in the whole key is a dominant 7th: the **V7**.
+That uniqueness is what makes the dominant 7th such a strong signpost — when
+you hear one, your ear knows where home is.
+
+## Why it matters
+
+Seventh chords are where harmony stops being merely correct and starts being
+**expressive**. The same I–IV–V you harmonised with plain triads becomes
+something richer as Imaj7–IVmaj7–V7. The next lesson goes one step further —
+stacking thirds *past* the seventh into **extensions**, and rearranging the
+notes you have into **voicings**.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+How many notes are in a seventh chord?
+
+<Option>Three</Option>
+<Option>Four</Option>
+<Option>Five</Option>
+<Option>Six</Option>
+</Question>
+
+<Question type="multiple-choice" answer={2}>
+A dominant seventh chord is built from...
+
+<Option>a minor triad plus a major seventh</Option>
+<Option>a major triad plus a major seventh</Option>
+<Option>a major triad plus a minor seventh</Option>
+<Option>a diminished triad plus a minor seventh</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+A dominant seventh chord contains a tritone between its third and its seventh.
+
+</Question>
+
+<Question type="true-false" answer={false}>
+Every diatonic seventh chord in a major key is a dominant seventh.
+
+</Question>
+
+<Question type="play-and-identify" play="C4,E4,G4,Bb4" answer="dominant">
+Listen to the seventh chord. Is it a lush major 7th or a tense dominant 7th?
+
+<Option value="major7">Major seventh</Option>
+<Option value="dominant">Dominant seventh</Option>
+</Question>
+
+</Quiz>
