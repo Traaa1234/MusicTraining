@@ -24,6 +24,10 @@ import * as triads from "@/content/lessons/chords/triads.mdx";
 import * as diatonicChords from "@/content/lessons/chords/diatonic-chords.mdx";
 import * as seventhChords from "@/content/lessons/chords/seventh-chords.mdx";
 import * as extensionsAndVoicings from "@/content/lessons/chords/extensions-and-voicings.mdx";
+import * as cadences from "@/content/lessons/progressions/cadences.mdx";
+import * as theIiVI from "@/content/lessons/progressions/the-ii-v-i.mdx";
+import * as popProgressions from "@/content/lessons/progressions/pop-progressions.mdx";
+import * as twelveBarBlues from "@/content/lessons/progressions/twelve-bar-blues-and-modal-interchange.mdx";
 import * as theCagedSystem from "@/content/lessons/guitar-techniques/the-caged-system.mdx";
 
 export type LessonLevel = "beginner" | "intermediate" | "advanced";
@@ -137,6 +141,10 @@ const LESSON_MODULES = [
   diatonicChords,
   seventhChords,
   extensionsAndVoicings,
+  cadences,
+  theIiVI,
+  popProgressions,
+  twelveBarBlues,
   theCagedSystem,
 ];
 
