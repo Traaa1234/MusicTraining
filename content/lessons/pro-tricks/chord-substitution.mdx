@@ -1,0 +1,140 @@
+export const frontmatter = {
+  title: "Chord Substitution",
+  slug: "chord-substitution",
+  level: "advanced",
+  category: "pro-tricks",
+  prerequisites: ["secondary-dominants"],
+  estimatedMinutes: 12,
+  order: 2,
+};
+
+# Chord Substitution
+
+**Chord substitution** is the art of replacing one chord with another that
+does a similar job but wears a different colour. It is how a player takes a
+plain progression and **reharmonizes** it — same melody, fresher chords.
+
+## Chords have functions
+
+Every diatonic chord belongs to one of three **functions** — three jobs a
+chord can do in a key:
+
+| Function | Job | Chords in a major key |
+| --- | --- | --- |
+| Tonic | home, rest | I, iii, vi |
+| Subdominant | move away | IV, ii |
+| Dominant | tension, pull home | V, vii° |
+
+The key idea: chords inside the **same function group can stand in for one
+another**. Swap a chord for another with the same job and the progression's
+logic survives — only its colour changes.
+
+## Diatonic substitution
+
+The simplest substitutions stay inside the key. Look at why I, iii and vi all
+count as "tonic":
+
+- **I** is C – E – G
+- **iii** is E – G – B — it shares **E and G** with I
+- **vi** is A – C – E — it shares **C and E** with I
+
+Because they overlap by two notes, iii and vi sound like softer, shadier
+versions of home.
+
+<PlayButton notes="C4 E4 G4" label="I — C major (bright home)" chord />
+<PlayButton notes="A3 C4 E4" label="vi — A minor (a shadier home)" chord />
+
+Substituting **vi for I** is the most common move of all — it is exactly what
+the I–V–**vi**–IV pop loop does. Reharmonizing is often nothing more than
+choosing a same-function neighbour.
+
+## The tritone substitution
+
+The most striking substitution targets the **dominant** chord, and it is worth
+a section of its own. It is called the **tritone substitution**.
+
+Recall what powers a dominant 7th: the **tritone** inside it. In **G7** — G B D
+F — that tritone is **B and F**.
+
+Now here is the trick. Build the dominant 7th whose root is a **tritone away**
+from G — that root is **D♭**, and the chord is **D♭7**: D♭ – F – A♭ – C♭. Its
+own tritone? **F and C♭** — and C♭ is the same pitch as B.
+
+**G7 and D♭7 contain the very same tritone.** That shared tritone is the part
+that craves resolution — so D♭7 resolves to C just as convincingly as G7 does.
+
+<PlayButton notes="G3 B3 D4 F4" label="G7 — the normal dominant" chord />
+<PlayButton notes="Db4 F4 Ab4 B4" label="D♭7 — the tritone substitute" chord />
+<PlayButton notes="C4 E4 G4" label="...both resolve to C" chord />
+
+## Why the tritone sub sounds so good
+
+The payoff is in the **bass line**. A normal ii–V–I in C moves its roots
+D – G – C. Swap in the tritone sub and the roots become **D – D♭ – C** — a
+smooth chromatic slide, each step a half step down:
+
+<PlayButton notes="D4 F4 A4 C5" label="ii — Dm7" chord />
+<PlayButton notes="Db4 F4 Ab4 B4" label="♭II7 — D♭7 (tritone sub for G7)" chord />
+<PlayButton notes="C4 E4 G4 B4" label="I — Cmaj7" chord />
+
+That chromatic descent is one of the most elegant sounds in jazz, and it costs
+nothing — the chord still does the dominant's job.
+
+## Substitution is reharmonization
+
+String these ideas together and you can **reharmonize** a whole tune: keep the
+melody, keep the underlying functions, but replace chords with same-function
+neighbours, tritone subs and the secondary dominants from the last lesson. The
+melody stays recognisable while the harmony underneath turns rich and personal.
+Two musicians can play the same song and harmonise it completely differently —
+that freedom is chord substitution.
+
+## Why it matters
+
+Substitution is where a player stops merely *playing* a progression and starts
+*arranging* it. Knowing which chords share a function — and that any dominant
+has a tritone twin — turns every progression into raw material you can recolour
+at will. Next, the lessons reach outside the key entirely, with modal mixture.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+Chords that can substitute for one another usually share the same...
+
+<Option>root note</Option>
+<Option>harmonic function</Option>
+<Option>number of notes</Option>
+<Option>tempo</Option>
+</Question>
+
+<Question type="multiple-choice" answer={2}>
+Which three chords share the "tonic" function in a major key?
+
+<Option>ii, IV and V</Option>
+<Option>I, IV and V</Option>
+<Option>I, iii and vi</Option>
+<Option>ii, iii and vii°</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+A dominant 7th chord and the dominant 7th a tritone away share the same
+tritone.
+
+</Question>
+
+<Question type="multiple-choice" answer={0}>
+Replacing G7 with its tritone substitute D♭7 in a ii–V–I creates a bass line
+that...
+
+<Option>descends chromatically: D – D♭ – C</Option>
+<Option>leaps by octaves</Option>
+<Option>stays on a single note</Option>
+<Option>ascends by whole steps</Option>
+</Question>
+
+<Question type="true-false" answer={false}>
+Substituting a chord always changes the melody of the song.
+
+</Question>
+
+</Quiz>

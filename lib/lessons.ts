@@ -36,6 +36,10 @@ import * as beatTempoAndMeter from "@/content/lessons/rhythm/beat-tempo-and-mete
 import * as noteDurations from "@/content/lessons/rhythm/note-durations.mdx";
 import * as timeSignatures from "@/content/lessons/rhythm/time-signatures.mdx";
 import * as rhythmicPatterns from "@/content/lessons/rhythm/rhythmic-patterns.mdx";
+import * as secondaryDominants from "@/content/lessons/pro-tricks/secondary-dominants.mdx";
+import * as chordSubstitution from "@/content/lessons/pro-tricks/chord-substitution.mdx";
+import * as modalMixture from "@/content/lessons/pro-tricks/modal-mixture.mdx";
+import * as voiceLeading from "@/content/lessons/pro-tricks/voice-leading.mdx";
 import * as theCagedSystem from "@/content/lessons/guitar-techniques/the-caged-system.mdx";
 
 export type LessonLevel = "beginner" | "intermediate" | "advanced";
@@ -161,6 +165,10 @@ const LESSON_MODULES = [
   noteDurations,
   timeSignatures,
   rhythmicPatterns,
+  secondaryDominants,
+  chordSubstitution,
+  modalMixture,
+  voiceLeading,
   theCagedSystem,
 ];
 

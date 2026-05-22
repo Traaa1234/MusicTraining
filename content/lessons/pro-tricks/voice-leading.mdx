@@ -1,0 +1,140 @@
+export const frontmatter = {
+  title: "Voice Leading",
+  slug: "voice-leading",
+  level: "advanced",
+  category: "pro-tricks",
+  prerequisites: ["modal-mixture"],
+  estimatedMinutes: 12,
+  order: 4,
+};
+
+# Voice Leading
+
+You have spent eight tracks learning *which* notes and chords to play. This
+final lesson is about something else entirely: playing them **beautifully**.
+**Voice leading** is the craft of moving smoothly from one chord to the next —
+and it is what separates harmony that is merely correct from harmony that
+sounds professional.
+
+## A chord is a set of voices
+
+Think of a chord not as one block but as several independent **voices** — as
+if a choir were singing it, one singer per note. Voice leading asks a simple
+question: when the chord changes, how does *each singer* get to their next
+note?
+
+The clumsy answer is for everyone to leap. The professional answer follows two
+rules.
+
+## Rule 1 — keep common tones
+
+If a note belongs to **both** the old chord and the new one, **keep it where it
+is**. Do not move a voice that does not need to move.
+
+C major (C–E–G) moving to A minor (A–C–E) shares **C and E**. Hold those two
+voices still and only one voice has to move — G slips down to A:
+
+<PlayButton notes="C4 E4 G4" label="C major" chord />
+<PlayButton notes="C4 E4 A4" label="A minor — only G moved, down to A" chord />
+
+Same A minor chord, but reached with the least possible motion. It sounds
+seamless because almost nothing changed.
+
+## Rule 2 — move the rest by step
+
+When a voice *does* have to move, send it the **shortest distance** — a step,
+or a half step, never a leap if a step will do.
+
+The Chords track called the 3rd and 7th the **guide tones**. In a ii–V–I they
+are perfectly built for this: voice the chords well and each guide tone slides
+into the next chord by a single step. The G7 tritone you have met so many times
+resolves *because* its two voices each move a half step — B up to C, F down to
+E. That is voice leading doing its job.
+
+## Contrary motion
+
+One more professional habit: when voices move, let some go **up** while others
+go **down**. Motion in opposite directions — **contrary motion** — sounds fuller
+and more independent than every voice sliding the same way in parallel. It is
+the difference between a choir and a single thickened line.
+
+## The line cliché
+
+Voice leading can become a feature in its own right. The **line cliché** is a
+chord that stays put while **one inner voice walks chromatically**.
+
+Hold a C major chord and let a single voice descend C – B – B♭ – A. The chord
+barely changes, but that creeping line is unmistakable — you have heard it in
+spy themes and torch songs for decades:
+
+<PlayButton notes="C4 E4 G4" label="C" chord />
+<PlayButton notes="C4 E4 G4 B4" label="Cmaj7 — the line reaches B" chord />
+<PlayButton notes="C4 E4 G4 Bb4" label="C7 — down to B♭" chord />
+<PlayButton notes="C4 E4 G4 A4" label="C6 — down to A" chord />
+
+Four chords, but really one chord with a melody hidden inside it. That is voice
+leading turned into a hook.
+
+## Smooth chords, smaller voicings
+
+Good voice leading also shapes *how* you voice a chord. Rather than play every
+note in root position and jump the whole shape around, players choose
+**inversions** and drop notes so the move to the next chord is as small as
+possible. Often the 5th is dropped and only the guide tones and root remain —
+just enough to state the chord, positioned to glide.
+
+## Why it matters — and the journey so far
+
+Voice leading is the final polish. The same progression — even the same rich,
+substituted, mixture-coloured progression from the last three lessons — can
+lurch or can flow, entirely depending on how each voice travels.
+
+And with that, the path is complete. You began with the names of seven notes.
+You can now build scales and modes, stack chords and extensions, drive
+progressions with cadences and the ii–V–I, place it all in time, write it in
+any key — and now move between every chord with the smooth, deliberate craft of
+a professional. Every one of these tools serves the same goal you started with:
+training your ear, and making music that sounds *good*.
+
+<Quiz>
+
+<Question type="multiple-choice" answer={1}>
+Voice leading is the craft of...
+
+<Option>choosing which key to play in</Option>
+<Option>moving smoothly between chords, voice by voice</Option>
+<Option>deciding the tempo of a piece</Option>
+<Option>naming the notes of a scale</Option>
+</Question>
+
+<Question type="multiple-choice" answer={0}>
+When a note belongs to both the old chord and the new chord, good voice
+leading says you should...
+
+<Option>keep it in the same voice, unmoved</Option>
+<Option>leap it up an octave</Option>
+<Option>always move it by a tritone</Option>
+<Option>remove it from the chord</Option>
+</Question>
+
+<Question type="true-false" answer={true}>
+Contrary motion means some voices move up while others move down.
+
+</Question>
+
+<Question type="multiple-choice" answer={2}>
+A line cliché is...
+
+<Option>a chord played as loudly as possible</Option>
+<Option>a fast run of sixteenth notes</Option>
+<Option>a held chord with one inner voice walking chromatically</Option>
+<Option>a key change to a distant key</Option>
+</Question>
+
+<Question type="true-false" answer={false}>
+When a voice must move to a new chord, it should always leap as far as
+possible.
+
+</Question>
+
+</Quiz>
