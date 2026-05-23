@@ -49,4 +49,19 @@ describe("getChordShapes", () => {
       expect(open?.positions, `${root}_${quality}`).toEqual(expected);
     }
   });
+
+  it("resolves G minor7 to the A-shape barre at fret 10", () => {
+    const shapes = getChordShapes("G", "minor7");
+    const barre = shapes.find((s) => s.name === "A-shape barre");
+    expect(barre).toBeDefined();
+    expect(barre?.baseFret).toBe(10);
+    expect(barre?.positions).toEqual([null, 10, 12, 10, 11, 10]);
+  });
+
+  it("resolves C diminished7 to the four-string voicing", () => {
+    const shapes = getChordShapes("C", "diminished7");
+    const voicing = shapes.find((s) => s.name === "four-string voicing");
+    expect(voicing).toBeDefined();
+    expect(voicing?.positions).toEqual([null, null, 1, 2, 1, 2]);
+  });
 });

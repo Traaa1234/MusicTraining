@@ -217,6 +217,7 @@ const OPEN_SHAPES: Record<string, ChordShape> = {
 };
 
 const SHAPE_TEMPLATES: ChordShapeTemplate[] = [
+  // ---- major ----
   {
     quality: "major",
     rootString: 0,
@@ -229,6 +230,134 @@ const SHAPE_TEMPLATES: ChordShapeTemplate[] = [
     quality: "major",
     rootString: 1,
     positions: [null, 0, 2, 2, 2, 0],
+    fingers: [null, 1, 2, 3, 4, 1],
+    barre: { offset: 0, fromString: 1, toString: 5 },
+    name: "A-shape barre",
+  },
+
+  // ---- minor ----
+  {
+    quality: "minor",
+    rootString: 0,
+    positions: [0, 2, 2, 0, 0, 0],
+    fingers: [1, 3, 4, 1, 1, 1],
+    barre: { offset: 0, fromString: 0, toString: 5 },
+    name: "E-shape barre",
+  },
+  {
+    quality: "minor",
+    rootString: 1,
+    positions: [null, 0, 2, 2, 1, 0],
+    fingers: [null, 1, 3, 4, 2, 1],
+    barre: { offset: 0, fromString: 1, toString: 5 },
+    name: "A-shape barre",
+  },
+
+  // ---- dominant7 ----
+  {
+    quality: "dominant7",
+    rootString: 0,
+    positions: [0, 2, 0, 1, 0, 0],
+    fingers: [1, 3, 1, 2, 1, 1],
+    barre: { offset: 0, fromString: 0, toString: 5 },
+    name: "E-shape barre",
+  },
+  {
+    quality: "dominant7",
+    rootString: 1,
+    positions: [null, 0, 2, 0, 2, 0],
+    fingers: [null, 1, 3, 1, 4, 1],
+    barre: { offset: 0, fromString: 1, toString: 5 },
+    name: "A-shape barre",
+  },
+
+  // ---- major7 ----
+  {
+    quality: "major7",
+    rootString: 0,
+    positions: [0, 2, 1, 1, 0, 0],
+    fingers: [1, 4, 2, 3, 1, 1],
+    barre: { offset: 0, fromString: 0, toString: 5 },
+    name: "E-shape barre",
+  },
+  {
+    quality: "major7",
+    rootString: 1,
+    positions: [null, 0, 2, 1, 2, 0],
+    fingers: [null, 1, 3, 2, 4, 1],
+    barre: { offset: 0, fromString: 1, toString: 5 },
+    name: "A-shape barre",
+  },
+
+  // ---- minor7 ----
+  {
+    quality: "minor7",
+    rootString: 0,
+    positions: [0, 2, 0, 0, 0, 0],
+    fingers: [1, 3, 1, 1, 1, 1],
+    barre: { offset: 0, fromString: 0, toString: 5 },
+    name: "E-shape barre",
+  },
+  {
+    quality: "minor7",
+    rootString: 1,
+    positions: [null, 0, 2, 0, 1, 0],
+    fingers: [null, 1, 3, 1, 2, 1],
+    barre: { offset: 0, fromString: 1, toString: 5 },
+    name: "A-shape barre",
+  },
+
+  // ---- minor7b5 (half-diminished) ----
+  {
+    quality: "minor7b5",
+    rootString: 1,
+    positions: [null, 0, 1, 0, 1, null],
+    fingers: [null, 1, 3, 2, 4, null],
+    name: "A-shape voicing",
+  },
+
+  // ---- diminished triad ----
+  {
+    quality: "diminished",
+    rootString: 1,
+    positions: [null, 0, 1, 2, 1, null],
+    fingers: [null, 1, 2, 4, 3, null],
+    name: "A-shape voicing",
+  },
+
+  // ---- diminished7 (B-string root, 4-string voicing) ----
+  {
+    quality: "diminished7",
+    rootString: 4,
+    positions: [null, null, 0, 1, 0, 1],
+    fingers: [null, null, 1, 3, 2, 4],
+    name: "four-string voicing",
+  },
+
+  // ---- augmented (low-E root, 4-string) ----
+  {
+    quality: "augmented",
+    rootString: 0,
+    positions: [0, 3, 2, 1, null, null],
+    fingers: [1, 4, 3, 2, null, null],
+    name: "four-string voicing",
+  },
+
+  // ---- sus2 ----
+  {
+    quality: "sus2",
+    rootString: 1,
+    positions: [null, 0, 2, 2, 0, 0],
+    fingers: [null, 1, 3, 4, 1, 1],
+    barre: { offset: 0, fromString: 1, toString: 5 },
+    name: "A-shape barre",
+  },
+
+  // ---- sus4 ----
+  {
+    quality: "sus4",
+    rootString: 1,
+    positions: [null, 0, 2, 2, 3, 0],
     fingers: [null, 1, 2, 3, 4, 1],
     barre: { offset: 0, fromString: 1, toString: 5 },
     name: "A-shape barre",
