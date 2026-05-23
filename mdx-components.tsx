@@ -3,6 +3,7 @@
 // and prose elements get consistent styling.
 import type { MDXComponents } from "mdx/types";
 import {
+  MdxChordDiagram,
   MdxCircleOfFifths,
   MdxFretboard,
   MdxPiano,
@@ -74,6 +75,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     Fretboard: MdxFretboard,
     CircleOfFifths: MdxCircleOfFifths,
     PlayButton: MdxPlayButton,
+    ChordDiagram: MdxChordDiagram,
     Quiz,
     Question,
     Option,
