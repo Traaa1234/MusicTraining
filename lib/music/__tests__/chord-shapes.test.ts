@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { getChordShapes } from "@/lib/music/chord-shapes";
+import { buildChord } from "@/lib/music/chords";
+import { STANDARD_TUNING } from "@/lib/music/fretboard";
+import {
+  SHARP_NOTE_NAMES,
+  chromaOf,
+  midiFromPitch,
+} from "@/lib/music/notes";
 import type { ChordQuality, NoteName } from "@/types/music";
 
 describe("getChordShapes", () => {
@@ -64,4 +71,56 @@ describe("getChordShapes", () => {
     expect(voicing).toBeDefined();
     expect(voicing?.positions).toEqual([null, null, 1, 2, 1, 2]);
   });
+});
+
+const QUALITIES: ChordQuality[] = [
+  "major",
+  "minor",
+  "dominant7",
+  "major7",
+  "minor7",
+  "minor7b5",
+  "diminished",
+  "diminished7",
+  "augmented",
+  "sus2",
+  "sus4",
+];
+
+function shapePitchClasses(shape: { positions: (number | null)[] }): Set<number> {
+  const set = new Set<number>();
+  shape.positions.forEach((fret, string) => {
+    if (fret === null) return;
+    const open = midiFromPitch(STANDARD_TUNING[string]);
+    set.add((open + fret) % 12);
+  });
+  return set;
+}
+
+describe("chord-shape notes match the chord", () => {
+  for (const root of SHARP_NOTE_NAMES) {
+    for (const quality of QUALITIES) {
+      it(`every shape for ${root} ${quality} sounds only chord tones`, () => {
+        const chord = buildChord(root, quality);
+        const allowed = new Set(chord.notes.map((n) => chromaOf(n)));
+        const shapes = getChordShapes(root, quality);
+        expect(shapes.length, `no shapes for ${root} ${quality}`).toBeGreaterThan(0);
+        for (const shape of shapes) {
+          const got = shapePitchClasses(shape);
+          for (const pc of got) {
+            expect(
+              allowed.has(pc),
+              `${root} ${quality} / ${shape.name}: pitch class ${pc} is not in the chord (allowed: ${[...allowed].join(",")})`,
+            ).toBe(true);
+          }
+          // Also require the root to be present — catches gross misplacement.
+          const rootPc = chromaOf(root);
+          expect(
+            got.has(rootPc),
+            `${root} ${quality} / ${shape.name}: missing root pitch class ${rootPc}`,
+          ).toBe(true);
+        }
+      });
+    }
+  }
 });
