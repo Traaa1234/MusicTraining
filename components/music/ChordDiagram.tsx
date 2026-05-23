@@ -3,7 +3,6 @@
 
 // One chord shape, drawn as a standard vertical chord-box diagram.
 // Click anywhere on the SVG to hear the chord.
-import { useId } from "react";
 import type { ChordQuality, NoteName } from "@/types/music";
 import { playChord } from "@/lib/audio/playback";
 import { buildChord } from "@/lib/music/chords";
@@ -39,7 +38,6 @@ export function ChordDiagram({
   label,
   className,
 }: ChordDiagramProps) {
-  const gradId = useId();
   const width = PAD_LEFT + STRING_SPACING * (STRING_COUNT - 1) + PAD_RIGHT;
   const height = PAD_TOP + FRET_HEIGHT * FRET_ROWS + PAD_BOTTOM;
   const showNut = shape.baseFret === 1;
@@ -62,13 +60,6 @@ export function ChordDiagram({
       role="img"
       aria-label={`${label ?? `${root} ${quality}`} chord diagram`}
     >
-      <defs>
-        <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="hsl(var(--card))" />
-          <stop offset="100%" stopColor="hsl(var(--card))" />
-        </linearGradient>
-      </defs>
-
       {/* label */}
       {label && (
         <text
