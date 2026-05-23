@@ -1,8 +1,48 @@
 // Guitar chord-shape data and resolver. Given a chord (root + quality),
 // returns one or more playable fingerings — open shapes first, then movable
 // barre templates slid to the right fret.
-import type { ChordQuality, NoteName } from "@/types/music";
+import type { NoteName } from "@/types/music";
 import { chromaOf } from "@/lib/music/notes";
+
+/**
+ * Chord qualities this module can render as guitar shapes. A strict subset of
+ * the broader `ChordQuality` union from @/types/music — `major6`, `minor6`
+ * and `add9` exist as chord types but have no shapes here, so we narrow the
+ * resolver's input to surface unsupported chords at compile time.
+ */
+export type SupportedChordQuality =
+  | "major"
+  | "minor"
+  | "diminished"
+  | "augmented"
+  | "sus2"
+  | "sus4"
+  | "major7"
+  | "minor7"
+  | "dominant7"
+  | "minor7b5"
+  | "diminished7";
+
+/** The supported qualities, in the order the chord library page lists them. */
+export const SUPPORTED_CHORD_QUALITIES: SupportedChordQuality[] = [
+  "major",
+  "minor",
+  "dominant7",
+  "major7",
+  "minor7",
+  "minor7b5",
+  "diminished",
+  "diminished7",
+  "augmented",
+  "sus2",
+  "sus4",
+];
+
+export function isSupportedChordQuality(
+  value: string,
+): value is SupportedChordQuality {
+  return (SUPPORTED_CHORD_QUALITIES as string[]).includes(value);
+}
 
 export interface ChordShape {
   /** 6 strings, low E first. null = muted (×), 0 = open (O), n>=1 = fret n. */
@@ -17,7 +57,7 @@ export interface ChordShape {
 }
 
 export interface ChordShapeTemplate {
-  quality: ChordQuality;
+  quality: SupportedChordQuality;
   /** Which string carries the root note (0=low E, 1=A, 2=D, 3=G, 4=B, 5=high E). */
   rootString: 0 | 1 | 2 | 3 | 4 | 5;
   /** Offsets from the root fret. */
@@ -393,7 +433,7 @@ function applyTemplate(
 
 export function getChordShapes(
   root: NoteName,
-  quality: ChordQuality,
+  quality: SupportedChordQuality,
 ): ChordShape[] {
   const result: ChordShape[] = [];
   const open = OPEN_SHAPES[`${root}_${quality}`];

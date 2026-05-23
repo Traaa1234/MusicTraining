@@ -2,25 +2,30 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { ChordQuality, NoteName } from "@/types/music";
+import type { NoteName } from "@/types/music";
 import { ChordDiagram } from "@/components/music/ChordDiagram";
-import { getChordShapes } from "@/lib/music/chord-shapes";
+import {
+  SUPPORTED_CHORD_QUALITIES,
+  getChordShapes,
+  isSupportedChordQuality,
+  type SupportedChordQuality,
+} from "@/lib/music/chord-shapes";
 import { SHARP_NOTE_NAMES } from "@/lib/music/notes";
 import { cn } from "@/lib/utils";
 
-const QUALITIES: Array<{ value: ChordQuality; label: string }> = [
-  { value: "major", label: "major" },
-  { value: "minor", label: "minor" },
-  { value: "dominant7", label: "7" },
-  { value: "major7", label: "maj7" },
-  { value: "minor7", label: "m7" },
-  { value: "minor7b5", label: "m7♭5" },
-  { value: "diminished", label: "dim" },
-  { value: "diminished7", label: "dim7" },
-  { value: "augmented", label: "aug" },
-  { value: "sus2", label: "sus2" },
-  { value: "sus4", label: "sus4" },
-];
+const QUALITY_LABELS: Record<SupportedChordQuality, string> = {
+  major: "major",
+  minor: "minor",
+  dominant7: "7",
+  major7: "maj7",
+  minor7: "m7",
+  minor7b5: "m7♭5",
+  diminished: "dim",
+  diminished7: "dim7",
+  augmented: "aug",
+  sus2: "sus2",
+  sus4: "sus4",
+};
 
 function prettyNote(name: string): string {
   return name.replace(/#/g, "♯").replace(/b/g, "♭");
@@ -28,15 +33,17 @@ function prettyNote(name: string): string {
 
 export default function ChordLibraryPage() {
   const [root, setRoot] = useState<NoteName>("C");
-  const [quality, setQuality] = useState<ChordQuality>("major");
+  const [quality, setQuality] = useState<SupportedChordQuality>("major");
 
   // Read URL state on mount.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const r = params.get("root") as NoteName | null;
-    const q = params.get("quality") as ChordQuality | null;
-    if (r && SHARP_NOTE_NAMES.includes(r)) setRoot(r);
-    if (q && QUALITIES.some((opt) => opt.value === q)) setQuality(q);
+    const r = params.get("root");
+    const q = params.get("quality");
+    if (r && (SHARP_NOTE_NAMES as readonly string[]).includes(r)) {
+      setRoot(r as NoteName);
+    }
+    if (q && isSupportedChordQuality(q)) setQuality(q);
   }, []);
 
   // Write URL state on change.
@@ -49,8 +56,7 @@ export default function ChordLibraryPage() {
   }, [root, quality]);
 
   const shapes = getChordShapes(root, quality);
-  const qualityLabel =
-    QUALITIES.find((opt) => opt.value === quality)?.label ?? quality;
+  const qualityLabel = QUALITY_LABELS[quality];
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-8">
@@ -87,19 +93,19 @@ export default function ChordLibraryPage() {
           Quality
         </h2>
         <div className="flex flex-wrap gap-1.5">
-          {QUALITIES.map((opt) => (
+          {SUPPORTED_CHORD_QUALITIES.map((q) => (
             <button
-              key={opt.value}
+              key={q}
               type="button"
-              onClick={() => setQuality(opt.value)}
+              onClick={() => setQuality(q)}
               className={cn(
                 "rounded-md border px-3 py-1.5 text-sm font-medium transition-colors",
-                quality === opt.value
+                quality === q
                   ? "border-primary bg-primary text-primary-foreground"
                   : "bg-card hover:bg-muted",
               )}
             >
-              {opt.label}
+              {QUALITY_LABELS[q]}
             </button>
           ))}
         </div>

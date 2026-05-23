@@ -11,7 +11,11 @@ import { CircleOfFifths } from "@/components/music/CircleOfFifths";
 import { Fretboard } from "@/components/music/Fretboard";
 import { Piano } from "@/components/music/Piano";
 import { playChord, playNotes } from "@/lib/audio/playback";
-import { getChordShapes } from "@/lib/music/chord-shapes";
+import {
+  getChordShapes,
+  isSupportedChordQuality,
+  type SupportedChordQuality,
+} from "@/lib/music/chord-shapes";
 import { buildChord } from "@/lib/music/chords";
 import {
   midiFromPitch,
@@ -117,11 +121,19 @@ export function MdxPlayButton({
   );
 }
 
-function parseChordSpec(spec: string): { root: NoteName; quality: ChordQuality } {
+function parseChordDiagramSpec(spec: string): {
+  root: NoteName;
+  quality: SupportedChordQuality;
+} {
   const tokens = spec.trim().split(/\s+/);
   const root = normalizeNoteName(tokens[0]);
-  const quality = (tokens.slice(1).join("") || "major") as ChordQuality;
-  return { root, quality };
+  const qualityStr = tokens.slice(1).join("") || "major";
+  if (!isSupportedChordQuality(qualityStr)) {
+    throw new Error(
+      `<ChordDiagram chord="${spec}"> — quality "${qualityStr}" has no guitar shapes. Supported: major, minor, dominant7, major7, minor7, minor7b5, diminished, diminished7, augmented, sus2, sus4.`,
+    );
+  }
+  return { root, quality: qualityStr };
 }
 
 export function MdxChordDiagram({
@@ -131,7 +143,7 @@ export function MdxChordDiagram({
   chord: string;
   shape?: number;
 }) {
-  const { root, quality } = parseChordSpec(chord);
+  const { root, quality } = parseChordDiagramSpec(chord);
   const shapes = getChordShapes(root, quality);
   const picked = shapes[shape] ?? shapes[0];
   if (!picked) return null;

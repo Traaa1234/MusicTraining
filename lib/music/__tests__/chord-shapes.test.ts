@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { getChordShapes } from "@/lib/music/chord-shapes";
+import {
+  SUPPORTED_CHORD_QUALITIES,
+  getChordShapes,
+  type SupportedChordQuality,
+} from "@/lib/music/chord-shapes";
 import { buildChord } from "@/lib/music/chords";
 import { STANDARD_TUNING } from "@/lib/music/fretboard";
 import {
@@ -7,7 +11,7 @@ import {
   chromaOf,
   midiFromPitch,
 } from "@/lib/music/notes";
-import type { ChordQuality, NoteName } from "@/types/music";
+import type { NoteName } from "@/types/music";
 
 describe("getChordShapes", () => {
   it("returns the open C major shape", () => {
@@ -44,7 +48,7 @@ describe("getChordShapes", () => {
   });
 
   it("returns the open shape for every listed open key", () => {
-    const samples: Array<[NoteName, ChordQuality, (number | null)[]]> = [
+    const samples: Array<[NoteName, SupportedChordQuality, (number | null)[]]> = [
       ["G", "major", [3, 2, 0, 0, 0, 3]],
       ["E", "minor", [0, 2, 2, 0, 0, 0]],
       ["E", "dominant7", [0, 2, 0, 1, 0, 0]],
@@ -73,20 +77,6 @@ describe("getChordShapes", () => {
   });
 });
 
-const QUALITIES: ChordQuality[] = [
-  "major",
-  "minor",
-  "dominant7",
-  "major7",
-  "minor7",
-  "minor7b5",
-  "diminished",
-  "diminished7",
-  "augmented",
-  "sus2",
-  "sus4",
-];
-
 function shapePitchClasses(shape: { positions: (number | null)[] }): Set<number> {
   const set = new Set<number>();
   shape.positions.forEach((fret, string) => {
@@ -99,7 +89,7 @@ function shapePitchClasses(shape: { positions: (number | null)[] }): Set<number>
 
 describe("chord-shape notes match the chord", () => {
   for (const root of SHARP_NOTE_NAMES) {
-    for (const quality of QUALITIES) {
+    for (const quality of SUPPORTED_CHORD_QUALITIES) {
       it(`every shape for ${root} ${quality} sounds only chord tones`, () => {
         const chord = buildChord(root, quality);
         const allowed = new Set(chord.notes.map((n) => chromaOf(n)));
