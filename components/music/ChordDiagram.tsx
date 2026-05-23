@@ -2,11 +2,13 @@
 "use client";
 
 // One chord shape, drawn as a standard vertical chord-box diagram.
-// Click anywhere on the SVG to hear the chord.
+// Click anywhere on the SVG to hear the actual voicing — each fretted string
+// sounded at its real pitch, muted strings silent.
 import type { ChordQuality, NoteName } from "@/types/music";
-import { playChord } from "@/lib/audio/playback";
-import { buildChord } from "@/lib/music/chords";
+import { playNotes } from "@/lib/audio/playback";
 import type { ChordShape } from "@/lib/music/chord-shapes";
+import { STANDARD_TUNING } from "@/lib/music/fretboard";
+import { midiFromPitch, noteFromMidi } from "@/lib/music/notes";
 import { cn } from "@/lib/utils";
 
 const STRING_LABELS = ["E", "A", "D", "G", "B", "e"] as const;
@@ -45,8 +47,14 @@ export function ChordDiagram({
   const fretY = (row: number) => PAD_TOP + row * FRET_HEIGHT;
 
   const handleClick = () => {
-    const chord = buildChord(root, quality);
-    void playChord(chord, 1.2);
+    const notes = shape.positions
+      .map((fret, string) => {
+        if (fret === null) return null;
+        const openMidi = midiFromPitch(STANDARD_TUNING[string]);
+        return noteFromMidi(openMidi + fret);
+      })
+      .filter((n): n is NonNullable<typeof n> => n !== null);
+    void playNotes(notes, { gap: 0, duration: 1.2 });
   };
 
   return (
